@@ -10,18 +10,22 @@
           content="width=device-width, initial-scale=1.0">
 
     <title>
-        Parviz Tavakoli-Kolour | Marine Scientist & Coral Reef Ecologist
+        Parviz Tavakoli-Kolour | Marine Scientist
     </title>
 
     <meta name="description"
-          content="Parviz Tavakoli-Kolour — Marine Scientist and Coral Reef Ecologist researching coral thermal tolerance, acclimation, adaptation, bleaching, mesophotic reefs and coral reef change.">
+          content="Parviz Tavakoli-Kolour — Marine Scientist and Coral Reef Ecologist.">
 
-    <!-- Font Awesome for academic/social icons -->
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
     <style>
+
+        /* =========================================
+           RESET
+        ========================================= */
 
         * {
             margin: 0;
@@ -42,24 +46,28 @@
                 Helvetica,
                 sans-serif;
 
+            color: #e8f7fa;
+
+            background:
+                #031f2b;
+
             line-height: 1.7;
-
-            color: #243746;
-
-            background: #f7fbfc;
 
         }
 
 
         a {
-            color: inherit;
+
             text-decoration: none;
+
+            color: inherit;
+
         }
 
 
-        /* =========================
+        /* =========================================
            NAVIGATION
-        ========================= */
+        ========================================= */
 
         nav {
 
@@ -67,54 +75,113 @@
 
             top: 0;
 
+            left: 0;
+
             width: 100%;
 
             z-index: 1000;
 
             background:
-                rgba(255,255,255,0.97);
+                rgba(2, 30, 42, 0.88);
+
+            backdrop-filter:
+                blur(12px);
 
             border-bottom:
-                1px solid #e5eeee;
+                1px solid
+                rgba(255,255,255,0.08);
 
         }
 
 
         .nav-container {
 
-            max-width: 1150px;
+            max-width: 1200px;
 
             margin: auto;
 
-            padding: 17px 25px;
+            padding:
+                12px 25px;
 
             display: flex;
 
-            justify-content: space-between;
-
             align-items: center;
+
+            justify-content: space-between;
 
         }
 
 
-        .logo {
+        /* =========================================
+           PTK LOGO
+        ========================================= */
+
+        .brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+        .profile-photo {
+
+            width: 46px;
+
+            height: 46px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border:
+                2px solid
+                #53d5d9;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0e7490,
+                    #53d5d9
+                );
+
+        }
+
+
+        .brand-name {
 
             font-size: 21px;
 
             font-weight: bold;
 
-            color: #075985;
+            letter-spacing: 1px;
+
+            color: white;
 
         }
 
+
+        .brand-name span {
+
+            color: #53d5d9;
+
+        }
+
+
+        /* =========================================
+           NAV LINKS
+        ========================================= */
 
         .nav-links {
 
             display: flex;
 
-            gap: 27px;
-
             list-style: none;
+
+            gap: 25px;
 
         }
 
@@ -123,7 +190,7 @@
 
             font-size: 14px;
 
-            color: #456;
+            color: #c7e5e9;
 
             transition: 0.3s;
 
@@ -132,18 +199,22 @@
 
         .nav-links a:hover {
 
-            color: #087f8c;
+            color: #53d5d9;
 
         }
 
 
-        /* =========================
+        /* =========================================
            HERO
-        ========================= */
+        ========================================= */
 
         .hero {
 
             min-height: 100vh;
+
+            position: relative;
+
+            overflow: hidden;
 
             display: flex;
 
@@ -151,33 +222,97 @@
 
             background:
 
-                linear-gradient(
-                    rgba(3,45,60,0.76),
-                    rgba(3,45,60,0.76)
+                radial-gradient(
+                    circle at 20% 80%,
+                    rgba(20,184,166,0.18),
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(14,116,144,0.30),
+                    transparent 40%
                 ),
 
                 linear-gradient(
-                    135deg,
-                    #075985,
-                    #0e7490,
-                    #164e63
+                    180deg,
+                    #021b28 0%,
+                    #04364a 55%,
+                    #075985 100%
                 );
 
-            color: white;
-
             padding:
-                120px 25px 80px;
+                130px 25px 100px;
+
+        }
+
+
+        /* underwater light */
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 700px;
+
+            height: 700px;
+
+            top: -350px;
+
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+            background:
+                radial-gradient(
+                    ellipse,
+                    rgba(94,234,212,0.12),
+                    transparent 65%
+                );
+
+            pointer-events: none;
 
         }
 
 
         .hero-container {
 
-            max-width: 1150px;
+            max-width: 1200px;
 
             width: 100%;
 
             margin: auto;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .hero-content {
+
+            max-width: 850px;
+
+        }
+
+
+        .eyebrow {
+
+            display: inline-block;
+
+            color: #53d5d9;
+
+            font-size: 14px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
 
         }
 
@@ -185,13 +320,15 @@
         .hero h1 {
 
             font-size:
-                clamp(42px, 7vw, 76px);
+                clamp(45px, 7vw, 82px);
 
-            line-height: 1.05;
+            line-height: 1.02;
 
-            margin-bottom: 20px;
+            font-weight: 700;
 
-            max-width: 900px;
+            color: white;
+
+            margin-bottom: 22px;
 
         }
 
@@ -200,37 +337,35 @@
 
             font-size: 25px;
 
-            font-weight: normal;
+            font-weight: 400;
+
+            color: #9de5e8;
 
             margin-bottom: 25px;
-
-            color: #c8f1f5;
 
         }
 
 
         .hero-description {
 
-            max-width: 800px;
+            max-width: 760px;
 
             font-size: 18px;
 
-            color: #e5f8fa;
+            color: #c9e9ed;
 
-            margin-bottom: 30px;
+            margin-bottom: 32px;
 
         }
 
 
-        /* =========================
-           ACADEMIC & SOCIAL LINKS
-        ========================= */
+        /* =========================================
+           SOCIAL ICONS
+        ========================================= */
 
-        .profile-links {
+        .social-icons {
 
             display: flex;
-
-            flex-wrap: wrap;
 
             gap: 12px;
 
@@ -239,72 +374,69 @@
         }
 
 
-        .profile-links a {
+        .social-icons a {
+
+            width: 45px;
+
+            height: 45px;
 
             display: flex;
 
             align-items: center;
 
-            gap: 8px;
+            justify-content: center;
 
-            padding:
-                9px 16px;
+            border-radius: 50%;
 
             border:
                 1px solid
-                rgba(255,255,255,0.65);
+                rgba(255,255,255,0.25);
 
-            border-radius: 25px;
+            color: #d9f4f6;
 
-            font-size: 14px;
+            background:
+                rgba(255,255,255,0.05);
 
-            color: white;
+            font-size: 18px;
 
             transition: 0.3s;
 
         }
 
 
-        .profile-links a:hover {
+        .social-icons a:hover {
 
-            background: white;
+            color: #031f2b;
 
-            color: #075985;
+            background: #53d5d9;
+
+            border-color: #53d5d9;
 
             transform:
-                translateY(-2px);
+                translateY(-4px);
 
         }
 
 
-        .profile-links i {
-
-            font-size: 16px;
-
-        }
-
-
-        /* =========================
+        /* =========================================
            BUTTONS
-        ========================= */
+        ========================================= */
 
         .buttons {
 
             display: flex;
 
-            gap: 15px;
-
             flex-wrap: wrap;
+
+            gap: 15px;
 
         }
 
 
         .button {
 
-            display: inline-block;
-
             padding:
-                12px 24px;
+                12px 25px;
 
             border-radius: 30px;
 
@@ -317,9 +449,9 @@
 
         .button-primary {
 
-            background: white;
+            background: #53d5d9;
 
-            color: #075985;
+            color: #032b3b;
 
         }
 
@@ -327,7 +459,9 @@
         .button-primary:hover {
 
             transform:
-                translateY(-2px);
+                translateY(-3px);
+
+            background: #7de7e9;
 
         }
 
@@ -335,27 +469,59 @@
         .button-outline {
 
             border:
-                1px solid white;
+                1px solid
+                #65dce0;
 
-            color: white;
+            color: #bceef0;
 
         }
 
 
         .button-outline:hover {
 
-            background: white;
+            background:
+                rgba(83,213,217,0.12);
 
-            color: #075985;
+            transform:
+                translateY(-3px);
 
         }
 
 
-        /* =========================
-           GENERAL SECTIONS
-        ========================= */
+        /* =========================================
+           OCEAN DIVIDER
+        ========================================= */
 
-        section {
+        .wave {
+
+            height: 80px;
+
+            margin-top: -80px;
+
+            position: relative;
+
+            z-index: 5;
+
+            background:
+                #f4fbfc;
+
+            clip-path:
+                ellipse(75% 70% at 50% 100%);
+
+        }
+
+
+        /* =========================================
+           MAIN CONTENT
+        ========================================= */
+
+        .light-section {
+
+            background:
+                #f4fbfc;
+
+            color:
+                #173746;
 
             padding:
                 90px 25px;
@@ -365,7 +531,7 @@
 
         .container {
 
-            max-width: 1150px;
+            max-width: 1100px;
 
             margin: auto;
 
@@ -376,92 +542,31 @@
 
             font-size: 38px;
 
+            color:
+                #075985;
+
             margin-bottom: 15px;
 
-            color: #164e63;
+        }
+
+
+        .section-text {
+
+            max-width: 760px;
+
+            color:
+                #526975;
+
+            font-size: 17px;
 
         }
 
 
-        .section-subtitle {
+        /* =========================================
+           INTRO CARDS
+        ========================================= */
 
-            color: #64748b;
-
-            max-width: 780px;
-
-            margin-bottom: 45px;
-
-        }
-
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                1.25fr 1fr;
-
-            gap: 60px;
-
-            align-items: center;
-
-        }
-
-
-        .about-text p {
-
-            margin-bottom: 18px;
-
-        }
-
-
-        .profile-card {
-
-            background: white;
-
-            padding: 35px;
-
-            border-radius: 18px;
-
-            box-shadow:
-                0 10px 35px
-                rgba(0,0,0,0.07);
-
-        }
-
-
-        .profile-card h3 {
-
-            color: #075985;
-
-            margin-bottom: 20px;
-
-        }
-
-
-        .profile-card p {
-
-            margin-bottom: 12px;
-
-        }
-
-
-        /* =========================
-           RESEARCH
-        ========================= */
-
-        .research-section {
-
-            background: #eef8fa;
-
-        }
-
-
-        .research-grid {
+        .intro-grid {
 
             display: grid;
 
@@ -470,60 +575,84 @@
 
             gap: 25px;
 
+            margin-top: 45px;
+
         }
 
 
-        .research-card {
+        .intro-card {
 
-            background: white;
+            background:
+                white;
 
             padding: 30px;
 
-            border-radius: 16px;
+            border-radius: 18px;
 
-            border-top:
-                4px solid #0891b2;
+            border:
+                1px solid
+                #dceff1;
 
             transition: 0.3s;
 
         }
 
 
-        .research-card:hover {
+        .intro-card:hover {
 
             transform:
                 translateY(-5px);
 
             box-shadow:
-                0 12px 30px
-                rgba(0,0,0,0.08);
+                0 15px 35px
+                rgba(4,70,90,0.10);
 
         }
 
 
-        .research-card h3 {
+        .intro-card i {
 
-            color: #075985;
+            font-size: 30px;
 
-            margin-bottom: 12px;
+            color:
+                #0891b2;
 
-        }
-
-
-        .research-card p {
-
-            color: #52606d;
+            margin-bottom: 20px;
 
         }
 
 
-        /* =========================
+        .intro-card h3 {
+
+            color:
+                #075985;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .intro-card p {
+
+            color:
+                #607682;
+
+            font-size: 15px;
+
+        }
+
+
+        /* =========================================
            AFFILIATIONS
-        ========================= */
+        ========================================= */
 
         .affiliations {
 
-            background: white;
+            background:
+                #eaf7f8;
+
+            padding:
+                80px 25px;
 
             text-align: center;
 
@@ -536,39 +665,39 @@
 
             justify-content: center;
 
-            align-items: stretch;
-
             flex-wrap: wrap;
 
             gap: 30px;
 
-            margin-top: 35px;
+            margin-top: 40px;
 
         }
 
 
         .university {
 
-            width: 240px;
+            width: 230px;
 
-            min-height: 180px;
+            min-height: 170px;
+
+            background:
+                white;
+
+            border-radius: 18px;
+
+            padding: 25px;
 
             display: flex;
 
             flex-direction: column;
 
-            justify-content: center;
-
             align-items: center;
 
-            padding: 25px;
-
-            border-radius: 16px;
-
-            background: #f8fbfc;
+            justify-content: center;
 
             border:
-                1px solid #e5eeee;
+                1px solid
+                #d6ecee;
 
             transition: 0.3s;
 
@@ -578,11 +707,11 @@
         .university:hover {
 
             transform:
-                translateY(-4px);
+                translateY(-5px);
 
             box-shadow:
-                0 10px 25px
-                rgba(0,0,0,0.07);
+                0 12px 30px
+                rgba(0,0,0,0.08);
 
         }
 
@@ -591,7 +720,7 @@
 
             max-width: 115px;
 
-            max-height: 85px;
+            max-height: 80px;
 
             object-fit: contain;
 
@@ -602,158 +731,73 @@
 
         .university-name {
 
+            color:
+                #294d5a;
+
             font-size: 14px;
 
             font-weight: bold;
 
-            color: #334155;
-
         }
 
 
-        /* =========================
-           METRICS
-        ========================= */
-
-        .stats {
-
-            background: #164e63;
-
-            color: white;
-
-        }
-
-
-        .stats-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3,1fr);
-
-            text-align: center;
-
-            gap: 30px;
-
-        }
-
-
-        .stat-number {
-
-            font-size: 42px;
-
-            font-weight: bold;
-
-        }
-
-
-        .stat-label {
-
-            color: #c8e8ed;
-
-        }
-
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact {
-
-            text-align: center;
-
-        }
-
-
-        .contact p {
-
-            max-width: 700px;
-
-            margin:
-                0 auto 30px;
-
-            color: #64748b;
-
-        }
-
-
-        .email-list {
-
-            margin-bottom: 30px;
-
-        }
-
-
-        .email-list a {
-
-            display: block;
-
-            color: #075985;
-
-            margin: 8px 0;
-
-            font-weight: 500;
-
-        }
-
-
-        .email-list a:hover {
-
-            text-decoration: underline;
-
-        }
-
-
-        /* =========================
+        /* =========================================
            FOOTER
-        ========================= */
+        ========================================= */
 
         footer {
 
-            background: #082f3b;
+            background:
+                #021923;
 
-            color: #b8d5da;
+            color:
+                #8fb9c1;
 
             text-align: center;
 
-            padding: 30px 20px;
+            padding:
+                30px 20px;
 
-            font-size: 14px;
+            font-size: 13px;
 
         }
 
 
-        /* =========================
+        /* =========================================
            MOBILE
-        ========================= */
+        ========================================= */
 
-        @media (max-width: 800px) {
+        @media (max-width: 850px) {
 
             .nav-links {
+
                 display: none;
+
             }
 
-            .about-grid {
+
+            .intro-grid {
+
                 grid-template-columns: 1fr;
+
             }
 
-            .research-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
 
             .hero h1 {
-                font-size: 48px;
+
+                font-size: 50px;
+
             }
 
-            .affiliation-grid {
-                gap: 20px;
+
+            .hero h2 {
+
+                font-size: 21px;
+
             }
 
         }
+
 
     </style>
 
@@ -763,53 +807,94 @@
 <body>
 
 
-<!-- =========================
+<!-- =========================================
      NAVIGATION
-========================= -->
+========================================= -->
 
 <nav>
 
     <div class="nav-container">
 
-        <a href="index.html"
-           class="logo">
 
-            PTK
+        <a href="index.html"
+           class="brand">
+
+
+            <!--
+
+                Replace this file with your photo:
+
+                images/profile.jpg
+
+            -->
+
+            <img
+                src="images/profile.jpg"
+                alt="Parviz Tavakoli-Kolour"
+                class="profile-photo">
+
+
+            <div class="brand-name">
+
+                <span>PTK</span>
+
+            </div>
+
 
         </a>
 
 
         <ul class="nav-links">
 
+
             <li>
-                <a href="#about">
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+
+            <li>
+                <a href="about.html">
                     About
                 </a>
             </li>
 
+
             <li>
-                <a href="#research">
+                <a href="research.html">
                     Research
                 </a>
             </li>
 
+
             <li>
-                <a href="#affiliations">
-                    Affiliations
+                <a href="publications.html">
+                    Publications
                 </a>
             </li>
+
+
+            <li>
+                <a href="cv.html">
+                    CV
+                </a>
+            </li>
+
 
             <li>
                 <a href="gallery.html">
-                    Photo Gallery
+                    Gallery
                 </a>
             </li>
 
+
             <li>
-                <a href="#contact">
+                <a href="contact.html">
                     Contact
                 </a>
             </li>
+
 
         </ul>
 
@@ -818,232 +903,164 @@
 </nav>
 
 
-<!-- =========================
+<!-- =========================================
      HERO
-========================= -->
+========================================= -->
 
-<section class="hero"
-         id="home">
+<section class="hero">
+
 
     <div class="hero-container">
 
 
-        <h1>
-            Parviz Tavakoli-Kolour
-        </h1>
+        <div class="hero-content">
 
 
-        <h2>
-            Marine Scientist & Coral Reef Ecologist
-        </h2>
+            <div class="eyebrow">
 
+                Marine Science · Coral Reefs
 
-        <p class="hero-description">
+            </div>
 
-            I study how coral reefs respond to environmental change,
-            with a focus on thermal tolerance, acclimation, adaptation,
-            coral bleaching, mortality, and the resilience of coral reef
-            ecosystems under climate change.
 
-        </p>
+            <h1>
 
+                Parviz
+                Tavakoli-Kolour
 
-        <!-- ACADEMIC & SOCIAL PROFILES -->
+            </h1>
 
-        <div class="profile-links">
 
+            <h2>
 
-            <a href="https://scholar.google.com/citations?user=l_zzIt8AAAAJ&hl=en"
-               target="_blank"
-               rel="noopener">
+                Marine Scientist &
+                Coral Reef Ecologist
 
-                <i class="fa-solid fa-graduation-cap"></i>
+            </h2>
 
-                Google Scholar
 
-            </a>
+            <p class="hero-description">
 
+                I investigate how coral reefs respond to
+                environmental variability and climate change,
+                with a focus on coral thermal tolerance,
+                acclimation, adaptation, bleaching,
+                mortality, and reef resilience.
 
-            <a href="https://orcid.org/0000-0003-2633-5901"
-               target="_blank"
-               rel="noopener">
+            </p>
 
-                <i class="fa-brands fa-orcid"></i>
 
-                ORCID
+            <!-- =================================
+                 ICONS ONLY
+            ================================= -->
 
-            </a>
+            <div class="social-icons">
 
 
-            <a href="https://www.researchgate.net/profile/Parviz-Tavakoli-Kolour-2"
-               target="_blank"
-               rel="noopener">
+                <!-- Google Scholar -->
 
-                <i class="fa-brands fa-researchgate"></i>
+                <a
+                    href="https://scholar.google.com/citations?user=l_zzIt8AAAAJ&hl=en"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Google Scholar">
 
-                ResearchGate
+                    <i class="fa-solid fa-graduation-cap"></i>
 
-            </a>
+                </a>
 
 
-            <a href="https://x.com/parviz_tavakoli"
-               target="_blank"
-               rel="noopener">
+                <!-- ORCID -->
 
-                <i class="fa-brands fa-x-twitter"></i>
+                <a
+                    href="https://orcid.org/0000-0003-2633-5901"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="ORCID">
 
-                X
+                    <i class="fa-brands fa-orcid"></i>
 
-            </a>
+                </a>
 
 
-            <a href="https://www.instagram.com/parviz_tavakoli_kolour"
-               target="_blank"
-               rel="noopener">
+                <!-- ResearchGate -->
 
-                <i class="fa-brands fa-instagram"></i>
+                <a
+                    href="https://www.researchgate.net/profile/Parviz-Tavakoli-Kolour-2"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="ResearchGate">
 
-                Instagram
+                    <i class="fa-brands fa-researchgate"></i>
 
-            </a>
+                </a>
 
 
-            <a href="mailto:p.tavakoli@hotmail.com">
+                <!-- X -->
 
-                <i class="fa-solid fa-envelope"></i>
+                <a
+                    href="https://x.com/parviz_tavakoli"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="X">
 
-                Email
+                    <i class="fa-brands fa-x-twitter"></i>
 
-            </a>
+                </a>
 
 
-        </div>
+                <!-- Instagram -->
 
+                <a
+                    href="https://www.instagram.com/parviz_tavakoli_kolour"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Instagram">
 
-        <div class="buttons">
+                    <i class="fa-brands fa-instagram"></i>
 
+                </a>
 
-            <a href="#research"
-               class="button button-primary">
 
-                Explore My Research
+                <!-- Email -->
 
-            </a>
+                <a
+                    href="mailto:p.tavakoli@hotmail.com"
+                    aria-label="Email">
 
+                    <i class="fa-solid fa-envelope"></i>
 
-            <a href="gallery.html"
-               class="button button-outline">
-
-                Photo Gallery
-
-            </a>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section id="about">
-
-    <div class="container">
-
-
-        <h2 class="section-title">
-            About Me
-        </h2>
-
-
-        <p class="section-subtitle">
-
-            Researching coral reefs across environmental gradients,
-            life stages, and ecological scales.
-
-        </p>
-
-
-        <div class="about-grid">
-
-
-            <div class="about-text">
-
-
-                <p>
-
-                    I am a marine scientist and coral reef ecologist
-                    interested in understanding how corals respond to
-                    environmental variability and increasing thermal
-                    stress under climate change.
-
-                </p>
-
-
-                <p>
-
-                    My research combines field observations, ecological
-                    surveys, controlled experiments, environmental
-                    monitoring, and quantitative approaches to investigate
-                    coral acclimation, adaptation, thermal tolerance,
-                    bleaching, mortality, and reef resilience.
-
-                </p>
-
-
-                <p>
-
-                    My work spans tropical coral reef systems across
-                    the Indo-Pacific and Persian Gulf, providing an
-                    opportunity to examine coral responses across
-                    contrasting environmental conditions.
-
-                </p>
+                </a>
 
 
             </div>
 
 
-            <div class="profile-card">
+            <!-- BUTTONS -->
+
+            <div class="buttons">
 
 
-                <h3>
-                    Academic Profile
-                </h3>
+                <a
+                    href="research.html"
+                    class="button button-primary">
+
+                    Explore Research
+
+                </a>
 
 
-                <p>
-                    <strong>PhD:</strong>
-                    Marine and Environmental Science
-                </p>
+                <a
+                    href="gallery.html"
+                    class="button button-outline">
 
+                    Field Gallery
 
-                <p>
-                    <strong>Research:</strong>
-                    Coral Reef Ecology & Ecophysiology
-                </p>
-
-
-                <p>
-                    <strong>Research interests:</strong>
-                    Climate change, thermal tolerance,
-                    acclimation, adaptation, bleaching,
-                    mortality, and reef resilience
-                </p>
-
-
-                <p>
-                    <strong>Approaches:</strong>
-                    Field ecology, experimental biology,
-                    environmental monitoring, and quantitative analysis
-                </p>
+                </a>
 
 
             </div>
+
 
         </div>
 
@@ -1052,129 +1069,100 @@
 </section>
 
 
-<!-- =========================
-     RESEARCH
-========================= -->
+<!-- OCEAN WAVE -->
 
-<section id="research"
-         class="research-section">
+<div class="wave"></div>
+
+
+<!-- =========================================
+     INTRODUCTION
+========================================= -->
+
+<section class="light-section">
+
 
     <div class="container">
 
 
         <h2 class="section-title">
-            Research
+
+            Understanding Coral Reefs
+            in a Changing Ocean
+
         </h2>
 
 
-        <p class="section-subtitle">
+        <p class="section-text">
 
-            My research focuses on understanding why some corals
-            tolerate environmental extremes while others bleach,
-            experience mortality, or fail to recover.
+            My research combines field ecology, controlled
+            experiments, environmental monitoring, and
+            quantitative approaches to understand how corals
+            respond to environmental stress across different
+            habitats and geographic regions.
 
         </p>
 
 
-        <div class="research-grid">
+        <div class="intro-grid">
 
 
-            <div class="research-card">
+            <!-- CARD 1 -->
+
+            <div class="intro-card">
+
+                <i class="fa-solid fa-temperature-high"></i>
 
                 <h3>
-                    Coral Thermal Tolerance
+                    Coral Physiology
                 </h3>
 
                 <p>
 
-                    Understanding variation in coral heat tolerance
-                    and the mechanisms underlying resistance to
-                    marine heatwaves and thermal stress.
+                    Investigating coral responses to thermal
+                    stress, environmental variability,
+                    and marine heatwaves.
 
                 </p>
 
             </div>
 
 
-            <div class="research-card">
+            <!-- CARD 2 -->
+
+            <div class="intro-card">
+
+                <i class="fa-solid fa-water"></i>
 
                 <h3>
-                    Acclimation & Adaptation
+                    Coral Reef Ecology
                 </h3>
 
                 <p>
 
-                    Investigating how corals respond to environmental
-                    conditions across depths, habitats, geographical
-                    gradients, and life stages.
+                    Examining coral communities, bleaching,
+                    mortality, recovery, and ecological
+                    change across reef environments.
 
                 </p>
 
             </div>
 
 
-            <div class="research-card">
+            <!-- CARD 3 -->
+
+            <div class="intro-card">
+
+                <i class="fa-solid fa-earth-americas"></i>
 
                 <h3>
-                    Coral Bleaching & Mortality
+                    Climate Change
                 </h3>
 
                 <p>
 
-                    Identifying ecological and colony-level factors
-                    that explain variation in bleaching severity,
-                    mortality, and recovery.
-
-                </p>
-
-            </div>
-
-
-            <div class="research-card">
-
-                <h3>
-                    Mesophotic Coral Reefs
-                </h3>
-
-                <p>
-
-                    Investigating whether deeper coral populations
-                    can provide thermal refugia and contribute to
-                    coral reef persistence under climate change.
-
-                </p>
-
-            </div>
-
-
-            <div class="research-card">
-
-                <h3>
-                    Coral Reproduction & Life History
-                </h3>
-
-                <p>
-
-                    Exploring coral reproduction, early life stages,
-                    larval ecology, and how environmental conditions
-                    influence coral population persistence.
-
-                </p>
-
-            </div>
-
-
-            <div class="research-card">
-
-                <h3>
-                    Reef Community Change
-                </h3>
-
-                <p>
-
-                    Examining long-term changes in coral communities
-                    and the ecological consequences of repeated
-                    environmental disturbances.
+                    Understanding coral resilience and
+                    adaptation under increasing environmental
+                    variability and climate extremes.
 
                 </p>
 
@@ -1188,25 +1176,28 @@
 </section>
 
 
-<!-- =========================
-     ACADEMIC AFFILIATIONS
-========================= -->
+<!-- =========================================
+     AFFILIATIONS
+========================================= -->
 
-<section id="affiliations"
-         class="affiliations">
+<section class="affiliations">
+
 
     <div class="container">
 
 
         <h2 class="section-title">
+
             Academic Affiliations
+
         </h2>
 
 
-        <p class="section-subtitle">
+        <p class="section-text"
+           style="margin:auto;">
 
-            Academic institutions associated with my research
-            and scientific career.
+            Research institutions and academic environments
+            contributing to my scientific career.
 
         </p>
 
@@ -1214,12 +1205,15 @@
         <div class="affiliation-grid">
 
 
-            <!-- UNIVERSITY OF THE RYUKYUS -->
+            <!-- University of the Ryukyus -->
 
             <div class="university">
 
-                <img src="images/ryukyu-logo.png"
-                     alt="University of the Ryukyus logo">
+
+                <img
+                    src="images/ryukyu-logo.png"
+                    alt="University of the Ryukyus">
+
 
                 <div class="university-name">
 
@@ -1227,15 +1221,19 @@
 
                 </div>
 
+
             </div>
 
 
-            <!-- NATIONAL TAIWAN UNIVERSITY -->
+            <!-- National Taiwan University -->
 
             <div class="university">
 
-                <img src="images/ntu-logo.png"
-                     alt="National Taiwan University logo">
+
+                <img
+                    src="images/ntu-logo.png"
+                    alt="National Taiwan University">
+
 
                 <div class="university-name">
 
@@ -1243,21 +1241,6 @@
 
                 </div>
 
-            </div>
-
-
-            <!-- ADDITIONAL UNIVERSITY -->
-
-            <div class="university">
-
-                <img src="images/university3-logo.png"
-                     alt="University logo">
-
-                <div class="university-name">
-
-                    Add University
-
-                </div>
 
             </div>
 
@@ -1269,132 +1252,13 @@
 </section>
 
 
-<!-- =========================
-     ACADEMIC METRICS
-========================= -->
-
-<section class="stats">
-
-    <div class="container">
-
-
-        <div class="stats-grid">
-
-
-            <div>
-
-                <div class="stat-number">
-                    30+
-                </div>
-
-                <div class="stat-label">
-                    Scientific Publications
-                </div>
-
-            </div>
-
-
-            <div>
-
-                <div class="stat-number">
-                    11
-                </div>
-
-                <div class="stat-label">
-                    h-index
-                </div>
-
-            </div>
-
-
-            <div>
-
-                <div class="stat-number">
-                    270+
-                </div>
-
-                <div class="stat-label">
-                    Citations
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section id="contact"
-         class="contact">
-
-    <div class="container">
-
-
-        <h2 class="section-title">
-            Get in Touch
-        </h2>
-
-
-        <p>
-
-            I am interested in research collaborations,
-            interdisciplinary projects, and opportunities related
-            to coral reefs, climate change, marine ecology,
-            and environmental change.
-
-        </p>
-
-
-        <div class="email-list">
-
-
-            <a href="mailto:p.tavakoli@hotmail.com">
-
-                p.tavakoli@hotmail.com
-
-            </a>
-
-
-        </div>
-
-
-        <div class="buttons">
-
-
-            <a href="#home"
-               class="button button-primary">
-
-                Back to Top
-
-            </a>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
+<!-- =========================================
      FOOTER
-========================= -->
+========================================= -->
 
 <footer>
 
-    <p>
-
-        © 2026 Parviz Tavakoli-Kolour.
-        Marine Scientist & Coral Reef Ecologist.
-
-    </p>
+    © 2026 Parviz Tavakoli-Kolour
 
 </footer>
 
