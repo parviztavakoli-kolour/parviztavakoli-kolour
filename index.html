@@ -1,14 +1,25 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Parviz Tavakoli-Kolour | Marine Scientist & Coral Reef Ecologist</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Parviz Tavakoli-Kolour | Marine Scientist & Coral Reef Ecologist
+    </title>
 
     <meta name="description"
-          content="Parviz Tavakoli-Kolour — Marine Scientist and Coral Reef Ecologist studying coral thermal tolerance, acclimation, adaptation, bleaching, mesophotic reefs, and climate-driven reef change.">
+          content="Parviz Tavakoli-Kolour — Marine Scientist and Coral Reef Ecologist researching coral thermal tolerance, acclimation, adaptation, bleaching, mesophotic reefs and coral reef change.">
+
+    <!-- Font Awesome for academic/social icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 
     <style>
 
@@ -18,80 +29,133 @@
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
-            font-family: Arial, Helvetica, sans-serif;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
             line-height: 1.7;
+
             color: #243746;
+
             background: #f7fbfc;
+
         }
+
 
         a {
             color: inherit;
             text-decoration: none;
         }
 
+
         /* =========================
            NAVIGATION
         ========================= */
 
         nav {
+
             position: fixed;
+
             top: 0;
+
             width: 100%;
+
             z-index: 1000;
-            background: rgba(255,255,255,0.96);
-            border-bottom: 1px solid #e5eeee;
+
+            background:
+                rgba(255,255,255,0.97);
+
+            border-bottom:
+                1px solid #e5eeee;
+
         }
+
 
         .nav-container {
+
             max-width: 1150px;
+
             margin: auto;
+
             padding: 17px 25px;
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
         }
+
 
         .logo {
+
             font-size: 21px;
+
             font-weight: bold;
+
             color: #075985;
+
         }
+
 
         .nav-links {
+
             display: flex;
+
             gap: 27px;
+
             list-style: none;
+
         }
+
 
         .nav-links a {
+
             font-size: 14px;
+
             color: #456;
+
             transition: 0.3s;
+
         }
 
+
         .nav-links a:hover {
+
             color: #087f8c;
+
         }
+
 
         /* =========================
            HERO
         ========================= */
 
         .hero {
+
             min-height: 100vh;
+
             display: flex;
+
             align-items: center;
 
             background:
+
                 linear-gradient(
-                    rgba(3, 45, 60, 0.75),
-                    rgba(3, 45, 60, 0.75)
+                    rgba(3,45,60,0.76),
+                    rgba(3,45,60,0.76)
                 ),
+
                 linear-gradient(
                     135deg,
                     #075985,
@@ -100,318 +164,564 @@
                 );
 
             color: white;
-            padding: 120px 25px 80px;
+
+            padding:
+                120px 25px 80px;
+
         }
+
 
         .hero-container {
+
             max-width: 1150px;
+
             width: 100%;
+
             margin: auto;
+
         }
+
 
         .hero h1 {
-            font-size: clamp(42px, 7vw, 76px);
+
+            font-size:
+                clamp(42px, 7vw, 76px);
+
             line-height: 1.05;
+
             margin-bottom: 20px;
+
             max-width: 900px;
+
         }
+
 
         .hero h2 {
+
             font-size: 25px;
+
             font-weight: normal;
+
             margin-bottom: 25px;
+
             color: #c8f1f5;
+
         }
+
 
         .hero-description {
+
             max-width: 800px;
+
             font-size: 18px;
+
             color: #e5f8fa;
+
             margin-bottom: 30px;
+
         }
+
 
         /* =========================
-           SOCIAL LINKS
+           ACADEMIC & SOCIAL LINKS
         ========================= */
 
-        .social-links {
+        .profile-links {
+
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 12px;
+
             margin-bottom: 35px;
+
         }
 
-        .social-links a {
-            padding: 9px 17px;
-            border: 1px solid rgba(255,255,255,0.65);
+
+        .profile-links a {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding:
+                9px 16px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.65);
+
             border-radius: 25px;
+
             font-size: 14px;
+
             color: white;
+
             transition: 0.3s;
+
         }
 
-        .social-links a:hover {
+
+        .profile-links a:hover {
+
             background: white;
+
             color: #075985;
-            transform: translateY(-2px);
+
+            transform:
+                translateY(-2px);
+
         }
+
+
+        .profile-links i {
+
+            font-size: 16px;
+
+        }
+
 
         /* =========================
            BUTTONS
         ========================= */
 
         .buttons {
+
             display: flex;
+
             gap: 15px;
+
             flex-wrap: wrap;
+
         }
+
 
         .button {
+
             display: inline-block;
-            padding: 12px 24px;
+
+            padding:
+                12px 24px;
+
             border-radius: 30px;
+
             font-weight: bold;
+
             transition: 0.3s;
+
         }
+
 
         .button-primary {
+
             background: white;
+
             color: #075985;
+
         }
+
 
         .button-primary:hover {
-            transform: translateY(-2px);
+
+            transform:
+                translateY(-2px);
+
         }
+
 
         .button-outline {
-            border: 1px solid white;
+
+            border:
+                1px solid white;
+
             color: white;
+
         }
 
+
         .button-outline:hover {
+
             background: white;
+
             color: #075985;
+
         }
+
 
         /* =========================
            GENERAL SECTIONS
         ========================= */
 
         section {
-            padding: 90px 25px;
+
+            padding:
+                90px 25px;
+
         }
+
 
         .container {
+
             max-width: 1150px;
+
             margin: auto;
+
         }
+
 
         .section-title {
+
             font-size: 38px;
+
             margin-bottom: 15px;
+
             color: #164e63;
+
         }
 
+
         .section-subtitle {
+
             color: #64748b;
+
             max-width: 780px;
+
             margin-bottom: 45px;
+
         }
+
 
         /* =========================
            ABOUT
         ========================= */
 
         .about-grid {
+
             display: grid;
-            grid-template-columns: 1.25fr 1fr;
+
+            grid-template-columns:
+                1.25fr 1fr;
+
             gap: 60px;
+
             align-items: center;
+
         }
+
 
         .about-text p {
+
             margin-bottom: 18px;
+
         }
+
 
         .profile-card {
+
             background: white;
+
             padding: 35px;
+
             border-radius: 18px;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.07);
+
+            box-shadow:
+                0 10px 35px
+                rgba(0,0,0,0.07);
+
         }
+
 
         .profile-card h3 {
+
             color: #075985;
+
             margin-bottom: 20px;
+
         }
 
+
         .profile-card p {
+
             margin-bottom: 12px;
+
         }
+
 
         /* =========================
            RESEARCH
         ========================= */
 
         .research-section {
+
             background: #eef8fa;
+
         }
+
 
         .research-grid {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3,1fr);
+
             gap: 25px;
+
         }
+
 
         .research-card {
+
             background: white;
+
             padding: 30px;
+
             border-radius: 16px;
-            border-top: 4px solid #0891b2;
+
+            border-top:
+                4px solid #0891b2;
+
             transition: 0.3s;
+
         }
+
 
         .research-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(0,0,0,0.08);
+
         }
+
 
         .research-card h3 {
+
             color: #075985;
+
             margin-bottom: 12px;
+
         }
+
 
         .research-card p {
+
             color: #52606d;
+
         }
 
+
         /* =========================
-           UNIVERSITY AFFILIATIONS
+           AFFILIATIONS
         ========================= */
 
         .affiliations {
+
             background: white;
+
             text-align: center;
+
         }
+
 
         .affiliation-grid {
+
             display: flex;
+
             justify-content: center;
-            align-items: center;
+
+            align-items: stretch;
+
             flex-wrap: wrap;
-            gap: 55px;
+
+            gap: 30px;
+
             margin-top: 35px;
+
         }
+
 
         .university {
-            width: 220px;
-            min-height: 130px;
+
+            width: 240px;
+
+            min-height: 180px;
 
             display: flex;
+
             flex-direction: column;
+
             justify-content: center;
+
             align-items: center;
 
-            padding: 20px;
+            padding: 25px;
 
-            border-radius: 15px;
+            border-radius: 16px;
+
             background: #f8fbfc;
-            border: 1px solid #e5eeee;
+
+            border:
+                1px solid #e5eeee;
 
             transition: 0.3s;
+
         }
+
 
         .university:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 10px 25px
+                rgba(0,0,0,0.07);
+
         }
 
-        .university-logo {
-            width: 90px;
-            height: 70px;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .university img {
 
-            margin-bottom: 12px;
+            max-width: 115px;
 
-            color: #075985;
-            font-weight: bold;
-            font-size: 13px;
+            max-height: 85px;
+
+            object-fit: contain;
+
+            margin-bottom: 18px;
+
         }
+
 
         .university-name {
+
             font-size: 14px;
+
             font-weight: bold;
+
             color: #334155;
+
         }
 
+
         /* =========================
-           STATS
+           METRICS
         ========================= */
 
         .stats {
+
             background: #164e63;
+
             color: white;
+
         }
+
 
         .stats-grid {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3,1fr);
+
             text-align: center;
+
             gap: 30px;
+
         }
+
 
         .stat-number {
+
             font-size: 42px;
+
             font-weight: bold;
+
         }
 
+
         .stat-label {
+
             color: #c8e8ed;
+
         }
+
 
         /* =========================
            CONTACT
         ========================= */
 
         .contact {
+
             text-align: center;
+
         }
+
 
         .contact p {
+
             max-width: 700px;
-            margin: 0 auto 30px;
+
+            margin:
+                0 auto 30px;
+
             color: #64748b;
+
         }
+
 
         .email-list {
+
             margin-bottom: 30px;
+
         }
+
 
         .email-list a {
+
             display: block;
+
             color: #075985;
+
             margin: 8px 0;
+
             font-weight: 500;
+
         }
 
+
         .email-list a:hover {
+
             text-decoration: underline;
+
         }
+
 
         /* =========================
            FOOTER
         ========================= */
 
         footer {
+
             background: #082f3b;
+
             color: #b8d5da;
+
             text-align: center;
+
             padding: 30px 20px;
+
             font-size: 14px;
+
         }
+
 
         /* =========================
            MOBILE
@@ -440,12 +750,13 @@
             }
 
             .affiliation-grid {
-                gap: 25px;
+                gap: 20px;
             }
 
         }
 
     </style>
+
 </head>
 
 
@@ -460,26 +771,44 @@
 
     <div class="nav-container">
 
-        <a href="#home" class="logo">
+        <a href="index.html"
+           class="logo">
+
             PTK
+
         </a>
+
 
         <ul class="nav-links">
 
             <li>
-                <a href="#about">About</a>
+                <a href="#about">
+                    About
+                </a>
             </li>
 
             <li>
-                <a href="#research">Research</a>
+                <a href="#research">
+                    Research
+                </a>
             </li>
 
             <li>
-                <a href="#affiliations">Affiliations</a>
+                <a href="#affiliations">
+                    Affiliations
+                </a>
             </li>
 
             <li>
-                <a href="#contact">Contact</a>
+                <a href="gallery.html">
+                    Photo Gallery
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Contact
+                </a>
             </li>
 
         </ul>
@@ -493,17 +822,21 @@
      HERO
 ========================= -->
 
-<section class="hero" id="home">
+<section class="hero"
+         id="home">
 
     <div class="hero-container">
+
 
         <h1>
             Parviz Tavakoli-Kolour
         </h1>
 
+
         <h2>
             Marine Scientist & Coral Reef Ecologist
         </h2>
+
 
         <p class="hero-description">
 
@@ -515,40 +848,96 @@
         </p>
 
 
-        <!-- SOCIAL / ACADEMIC PROFILES -->
+        <!-- ACADEMIC & SOCIAL PROFILES -->
 
-        <div class="social-links">
+        <div class="profile-links">
 
-            <!-- Replace the # with your real links -->
 
-            <a href="#" target="_blank">
+            <a href="https://scholar.google.com/citations?user=l_zzIt8AAAAJ&hl=en"
+               target="_blank"
+               rel="noopener">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
                 Google Scholar
+
             </a>
 
-            <a href="#" target="_blank">
+
+            <a href="https://orcid.org/0000-0003-2633-5901"
+               target="_blank"
+               rel="noopener">
+
+                <i class="fa-brands fa-orcid"></i>
+
                 ORCID
+
             </a>
 
-            <a href="#" target="_blank">
+
+            <a href="https://www.researchgate.net/profile/Parviz-Tavakoli-Kolour-2"
+               target="_blank"
+               rel="noopener">
+
+                <i class="fa-brands fa-researchgate"></i>
+
                 ResearchGate
+
             </a>
 
-            <a href="#" target="_blank">
-                LinkedIn
+
+            <a href="https://x.com/parviz_tavakoli"
+               target="_blank"
+               rel="noopener">
+
+                <i class="fa-brands fa-x-twitter"></i>
+
+                X
+
             </a>
+
+
+            <a href="https://www.instagram.com/parviz_tavakoli_kolour"
+               target="_blank"
+               rel="noopener">
+
+                <i class="fa-brands fa-instagram"></i>
+
+                Instagram
+
+            </a>
+
+
+            <a href="mailto:p.tavakoli@hotmail.com">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                Email
+
+            </a>
+
 
         </div>
 
 
         <div class="buttons">
 
-            <a href="#research" class="button button-primary">
+
+            <a href="#research"
+               class="button button-primary">
+
                 Explore My Research
+
             </a>
 
-            <a href="#contact" class="button button-outline">
-                Contact
+
+            <a href="gallery.html"
+               class="button button-outline">
+
+                Photo Gallery
+
             </a>
+
 
         </div>
 
@@ -565,9 +954,11 @@
 
     <div class="container">
 
+
         <h2 class="section-title">
             About Me
         </h2>
+
 
         <p class="section-subtitle">
 
@@ -579,7 +970,9 @@
 
         <div class="about-grid">
 
+
             <div class="about-text">
+
 
                 <p>
 
@@ -589,6 +982,7 @@
                     stress under climate change.
 
                 </p>
+
 
                 <p>
 
@@ -600,6 +994,7 @@
 
                 </p>
 
+
                 <p>
 
                     My work spans tropical coral reef systems across
@@ -609,24 +1004,29 @@
 
                 </p>
 
+
             </div>
 
 
             <div class="profile-card">
 
+
                 <h3>
                     Academic Profile
                 </h3>
+
 
                 <p>
                     <strong>PhD:</strong>
                     Marine and Environmental Science
                 </p>
 
+
                 <p>
                     <strong>Research:</strong>
                     Coral Reef Ecology & Ecophysiology
                 </p>
+
 
                 <p>
                     <strong>Research interests:</strong>
@@ -635,11 +1035,13 @@
                     mortality, and reef resilience
                 </p>
 
+
                 <p>
                     <strong>Approaches:</strong>
                     Field ecology, experimental biology,
                     environmental monitoring, and quantitative analysis
                 </p>
+
 
             </div>
 
@@ -654,13 +1056,16 @@
      RESEARCH
 ========================= -->
 
-<section id="research" class="research-section">
+<section id="research"
+         class="research-section">
 
     <div class="container">
+
 
         <h2 class="section-title">
             Research
         </h2>
+
 
         <p class="section-subtitle">
 
@@ -784,21 +1189,24 @@
 
 
 <!-- =========================
-     UNIVERSITY AFFILIATIONS
+     ACADEMIC AFFILIATIONS
 ========================= -->
 
-<section id="affiliations" class="affiliations">
+<section id="affiliations"
+         class="affiliations">
 
     <div class="container">
+
 
         <h2 class="section-title">
             Academic Affiliations
         </h2>
 
+
         <p class="section-subtitle">
 
-            Academic institutions and research environments
-            associated with my research career.
+            Academic institutions associated with my research
+            and scientific career.
 
         </p>
 
@@ -806,46 +1214,49 @@
         <div class="affiliation-grid">
 
 
-            <!-- UNIVERSITY 1 -->
+            <!-- UNIVERSITY OF THE RYUKYUS -->
 
             <div class="university">
 
-                <div class="university-logo">
-                    LOGO
-                </div>
+                <img src="images/ryukyu-logo.png"
+                     alt="University of the Ryukyus logo">
 
                 <div class="university-name">
+
                     University of the Ryukyus
+
                 </div>
 
             </div>
 
 
-            <!-- UNIVERSITY 2 -->
+            <!-- NATIONAL TAIWAN UNIVERSITY -->
 
             <div class="university">
 
-                <div class="university-logo">
-                    LOGO
-                </div>
+                <img src="images/ntu-logo.png"
+                     alt="National Taiwan University logo">
 
                 <div class="university-name">
-                    University of Tehran
+
+                    National Taiwan University
+
                 </div>
 
             </div>
 
 
-            <!-- UNIVERSITY 3 -->
+            <!-- ADDITIONAL UNIVERSITY -->
 
             <div class="university">
 
-                <div class="university-logo">
-                    LOGO
-                </div>
+                <img src="images/university3-logo.png"
+                     alt="University logo">
 
                 <div class="university-name">
+
                     Add University
+
                 </div>
 
             </div>
@@ -865,6 +1276,7 @@
 <section class="stats">
 
     <div class="container">
+
 
         <div class="stats-grid">
 
@@ -919,13 +1331,16 @@
      CONTACT
 ========================= -->
 
-<section id="contact" class="contact">
+<section id="contact"
+         class="contact">
 
     <div class="container">
+
 
         <h2 class="section-title">
             Get in Touch
         </h2>
+
 
         <p>
 
@@ -939,24 +1354,27 @@
 
         <div class="email-list">
 
-            <!-- Replace these with your two real emails -->
 
-            <a href="mailto:YOUR-FIRST-EMAIL@example.com">
-                YOUR-FIRST-EMAIL@example.com
+            <a href="mailto:p.tavakoli@hotmail.com">
+
+                p.tavakoli@hotmail.com
+
             </a>
 
-            <a href="mailto:YOUR-SECOND-EMAIL@example.com">
-                YOUR-SECOND-EMAIL@example.com
-            </a>
 
         </div>
 
 
         <div class="buttons">
 
-            <a href="#home" class="button button-primary">
+
+            <a href="#home"
+               class="button button-primary">
+
                 Back to Top
+
             </a>
+
 
         </div>
 
@@ -972,13 +1390,16 @@
 <footer>
 
     <p>
+
         © 2026 Parviz Tavakoli-Kolour.
         Marine Scientist & Coral Reef Ecologist.
+
     </p>
 
 </footer>
 
 
 </body>
+
 </html>
 ```
