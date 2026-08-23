@@ -1,46 +1,726 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Parviz Tavakoli-Kolour | Coral Reef Ecologist</title>
+    <title>Parviz Tavakoli-Kolour | Marine Scientist</title>
+
+    <meta name="description" content="Parviz Tavakoli-Kolour — Marine scientist and coral reef ecologist researching coral thermal tolerance, acclimation, adaptation, climate change, and reef resilience.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #243746;
+            background: #f7fbfc;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255,255,255,0.96);
+            border-bottom: 1px solid #e5eeee;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #075985;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            color: #456;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #087f8c;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(
+                    rgba(3, 45, 60, 0.72),
+                    rgba(3, 45, 60, 0.72)
+                ),
+                linear-gradient(135deg, #075985, #0e7490, #164e63);
+            color: white;
+            padding: 100px 25px 70px;
+        }
+
+        .hero-container {
+            max-width: 1100px;
+            width: 100%;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+            max-width: 850px;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 25px;
+            color: #c8f1f5;
+        }
+
+        .hero p {
+            max-width: 750px;
+            font-size: 18px;
+            color: #e5f8fa;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button-primary {
+            background: white;
+            color: #075985;
+        }
+
+        .button-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .button-outline {
+            border: 1px solid white;
+            color: white;
+        }
+
+        .button-outline:hover {
+            background: white;
+            color: #075985;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 90px 25px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: 38px;
+            margin-bottom: 15px;
+            color: #164e63;
+        }
+
+        .section-subtitle {
+            color: #64748b;
+            max-width: 750px;
+            margin-bottom: 45px;
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+        }
+
+        .profile-card {
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.07);
+        }
+
+        .profile-card h3 {
+            color: #075985;
+            margin-bottom: 20px;
+        }
+
+        .profile-card p {
+            margin-bottom: 12px;
+        }
+
+        /* RESEARCH */
+
+        .research-section {
+            background: #eef8fa;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .research-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            border-top: 4px solid #0891b2;
+            transition: 0.3s;
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .research-card h3 {
+            color: #075985;
+            margin-bottom: 12px;
+        }
+
+        .research-card p {
+            color: #52606d;
+        }
+
+        /* CURRENT WORK */
+
+        .project {
+            background: white;
+            padding: 35px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+        }
+
+        .project h3 {
+            color: #075985;
+            margin-bottom: 10px;
+        }
+
+        /* NUMBERS */
+
+        .stats {
+            background: #164e63;
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center;
+            gap: 30px;
+        }
+
+        .stat-number {
+            font-size: 42px;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            color: #c8e8ed;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #64748b;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #082f3b;
+            color: #b8d5da;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Parviz Tavakoli-Kolour</h1>
+<!-- NAVIGATION -->
 
-    <h2>Coral Reef Ecologist</h2>
+<nav>
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+            PTK
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+        <h1>
+            Parviz Tavakoli-Kolour
+        </h1>
+
+        <h2>
+            Marine Scientist & Coral Reef Ecologist
+        </h2>
+
+        <p>
+            I study how coral reefs respond to environmental change,
+            with a particular focus on thermal tolerance, acclimation,
+            adaptation, environmental memory, and the future resilience
+            of coral reef ecosystems.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#research" class="button button-primary">
+                Explore My Research
+            </a>
+
+            <a href="#contact" class="button button-outline">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+        <p class="section-subtitle">
+            Researching coral reefs across environmental gradients,
+            life stages, and scales — from individual coral physiology
+            to reef-scale community change.
+        </p>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+                    I am a marine scientist and coral reef ecologist
+                    interested in understanding how corals cope with
+                    environmental variability and increasing thermal stress
+                    under climate change.
+                </p>
+
+                <p>
+                    My research combines field observations, controlled
+                    experiments, ecological surveys, and quantitative
+                    approaches to investigate coral acclimation,
+                    adaptation, thermal tolerance, bleaching, mortality,
+                    and reef resilience.
+                </p>
+
+                <p>
+                    My work spans tropical coral reef systems in the
+                    Indo-Pacific and Persian Gulf, allowing me to investigate
+                    how different thermal environments shape coral responses
+                    to climate extremes.
+                </p>
+
+            </div>
+
+            <div class="profile-card">
+
+                <h3>Academic Profile</h3>
+
+                <p><strong>PhD:</strong> Marine and Environmental Science</p>
+
+                <p>
+                    <strong>Research:</strong>
+                    Coral Reef Ecology & Ecophysiology
+                </p>
+
+                <p>
+                    <strong>Research interests:</strong>
+                    Climate change, thermal tolerance, acclimation,
+                    adaptation, bleaching and reef resilience
+                </p>
+
+                <p>
+                    <strong>Approaches:</strong>
+                    Field ecology, experimental biology,
+                    environmental monitoring and quantitative analysis
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RESEARCH -->
+
+<section id="research" class="research-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Research
+        </h2>
+
+        <p class="section-subtitle">
+            My research focuses on understanding why some corals
+            survive environmental extremes while others bleach,
+            suffer mortality, or fail to recover.
+        </p>
+
+        <div class="research-grid">
+
+            <div class="research-card">
+
+                <h3>
+                    Coral Thermal Tolerance
+                </h3>
+
+                <p>
+                    Understanding variation in coral heat tolerance
+                    and the mechanisms underlying resistance to
+                    marine heatwaves and thermal stress.
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>
+                    Acclimation & Adaptation
+                </h3>
+
+                <p>
+                    Investigating how corals respond to environmental
+                    conditions across depths, habitats, latitudinal
+                    gradients, and generations.
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>
+                    Environmental Memory
+                </h3>
+
+                <p>
+                    Exploring whether previous thermal exposure can
+                    prime corals for future heatwaves and whether
+                    this thermal memory has measurable limits.
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>
+                    Coral Bleaching & Mortality
+                </h3>
+
+                <p>
+                    Identifying ecological and colony-level factors
+                    that explain variation in bleaching severity,
+                    mortality, and recovery.
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>
+                    Mesophotic Coral Reefs
+                </h3>
+
+                <p>
+                    Investigating whether deeper coral populations
+                    can provide thermal refugia and contribute to
+                    coral reef persistence under climate change.
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>
+                    Reef Community Change
+                </h3>
+
+                <p>
+                    Examining long-term changes in coral communities
+                    and the ecological consequences of repeated
+                    thermal disturbances.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Current Research Directions
+        </h2>
+
+        <p class="section-subtitle">
+            Selected research themes and experimental directions
+            that currently shape my work.
+        </p>
+
+
+        <div class="project">
+
+            <h3>
+                Environmental Memory and the Limits of Coral Thermal Priming
+            </h3>
+
+            <p>
+                How long can corals retain the benefits of previous
+                thermal exposure? This research explores whether
+                thermal variability and repeated heatwaves generate
+                persistent physiological memory, and whether this
+                memory eventually weakens or becomes insufficient
+                under increasingly severe marine heatwaves.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>
+                Coral Responses Across Thermal Environments
+            </h3>
+
+            <p>
+                Comparing corals originating from thermally stable
+                and highly variable environments to understand how
+                environmental history influences heat tolerance,
+                bleaching susceptibility, and recovery.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>
+                Climate-Driven Changes in Coral Reef Communities
+            </h3>
+
+            <p>
+                Combining long-term ecological observations with
+                environmental datasets to investigate how repeated
+                climate extremes reshape coral communities across
+                geographical and environmental gradients.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats">
+
+    <div class="container">
+
+        <div class="stats-grid">
+
+            <div>
+                <div class="stat-number">30+</div>
+                <div class="stat-label">
+                    Scientific Publications
+                </div>
+            </div>
+
+            <div>
+                <div class="stat-number">11</div>
+                <div class="stat-label">
+                    h-index
+                </div>
+            </div>
+
+            <div>
+                <div class="stat-number">270+</div>
+                <div class="stat-label">
+                    Citations
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Get in Touch
+        </h2>
+
+        <p>
+            I am interested in research collaborations,
+            interdisciplinary projects, postdoctoral opportunities,
+            and discussions related to coral reefs, climate change,
+            and marine environmental change.
+        </p>
+
+        <div class="buttons">
+
+            <a href="mailto:YOUR-EMAIL@example.com"
+               class="button button-primary">
+                Email Me
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
 
     <p>
-        Marine scientist working on coral reef ecology,
-        coral thermal tolerance, acclimation, adaptation,
-        and climate change.
+        © 2026 Parviz Tavakoli-Kolour.
+        Marine Scientist & Coral Reef Ecologist.
     </p>
 
-    <h2>Research</h2>
-
-    <p>
-        My research focuses on understanding how corals respond
-        to environmental variability, thermal stress, and climate change.
-    </p>
-
-    <h2>Publications</h2>
-
-    <p>
-        My research includes coral bleaching and mortality,
-        thermal tolerance, mesophotic coral ecosystems,
-        and coral responses to climate change.
-    </p>
-
-    <h2>Contact</h2>
-
-    <p>
-        Email: your-email@example.com
-    </p>
+</footer>
 
 </body>
-
 </html>
+```
