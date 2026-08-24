@@ -2143,3 +2143,651 @@ main {
     animation:
         pageReveal .7s ease both;
 }
+
+/* =========================================================
+   SELECTED PUBLICATIONS
+   ========================================================= */
+
+
+.publication-page-hero {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 42, 49, 0.94),
+            rgba(5, 78, 87, 0.78)
+        );
+
+    min-height: 470px;
+
+    display: flex;
+
+    align-items: center;
+
+    color: white;
+
+    padding: 150px 40px 90px;
+
+}
+
+
+.publication-hero-inner {
+
+    width: 100%;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+}
+
+
+.publication-page-hero .section-label {
+
+    color: #9bdedb;
+
+}
+
+
+.publication-page-hero h1 {
+
+    font-size: clamp(55px, 7vw, 88px);
+
+    line-height: 1;
+
+    margin: 20px 0 25px;
+
+}
+
+
+.publication-page-hero p:last-child {
+
+    max-width: 720px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #d9eeee;
+
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+
+.publication-intro {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 100px 40px 70px;
+
+    text-align: center;
+
+}
+
+
+.publication-intro h2 {
+
+    font-size: 48px;
+
+    line-height: 1.15;
+
+    margin: 15px 0 25px;
+
+}
+
+
+.publication-intro > p:last-child {
+
+    color: #65787c;
+
+    font-size: 17px;
+
+}
+
+
+/* =========================================================
+   PUBLICATION GRID
+========================================================= */
+
+
+.selected-publications {
+
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+    padding: 20px 35px 120px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 38px;
+
+}
+
+
+/* =========================================================
+   PUBLICATION CARD
+========================================================= */
+
+
+.publication-card {
+
+    background: white;
+
+    border: 1px solid #dce8e7;
+
+    box-shadow:
+        0 10px 35px rgba(11, 52, 59, 0.07);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.publication-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 55px rgba(11, 52, 59, 0.15);
+
+}
+
+
+/* =========================================================
+   PAPER IMAGE
+========================================================= */
+
+
+.publication-image {
+
+    height: 285px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #dbeceb;
+
+}
+
+
+.publication-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+
+}
+
+
+.publication-card:hover
+.publication-image img {
+
+    transform: scale(1.05);
+
+}
+
+
+.publication-number {
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 20px;
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(255,255,255,0.92);
+
+    color: #075f67;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   PAPER CONTENT
+========================================================= */
+
+
+.publication-content {
+
+    padding: 34px 36px 38px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+}
+
+
+.publication-topic {
+
+    color: #087f82;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+
+}
+
+
+.publication-content h2 {
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    color: #17343d;
+
+    font-size: 29px;
+
+    line-height: 1.22;
+
+    margin-bottom: 17px;
+
+}
+
+
+.publication-citation {
+
+    color: #718286;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #e3eceb;
+
+}
+
+
+.publication-citation em {
+
+    color: #38575d;
+
+}
+
+
+/* =========================================================
+   RESEARCH HIGHLIGHT
+========================================================= */
+
+
+.research-highlight {
+
+    margin-top: 22px;
+
+    padding: 22px 22px 20px;
+
+    background: #f0f7f6;
+
+    border-left: 3px solid #58aaa8;
+
+}
+
+
+.research-highlight strong {
+
+    display: block;
+
+    color: #075f67;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+
+}
+
+
+.research-highlight p {
+
+    color: #536b70;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+
+}
+
+
+.research-highlight em {
+
+    color: #274f56;
+
+}
+
+
+/* =========================================================
+   READ PAPER
+========================================================= */
+
+
+.publication-link {
+
+    margin-top: auto;
+
+    padding-top: 28px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #075f67;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.publication-link span {
+
+    font-size: 18px;
+
+    transition:
+        transform 0.25s ease;
+
+}
+
+
+.publication-link:hover {
+
+    color: #0a9698;
+
+}
+
+
+.publication-link:hover span {
+
+    transform: translateX(6px);
+
+}
+
+
+/* =========================================================
+   ASSESSMENT
+========================================================= */
+
+
+.assessment-section {
+
+    background: #e9f3f2;
+
+    padding: 110px 40px;
+
+}
+
+
+.assessment-inner {
+
+    max-width: 950px;
+
+    margin: 0 auto;
+
+}
+
+
+.assessment-inner h2 {
+
+    font-size: 48px;
+
+    line-height: 1.15;
+
+    max-width: 750px;
+
+    margin: 15px 0 25px;
+
+}
+
+
+.assessment-inner > p {
+
+    color: #607579;
+
+    max-width: 760px;
+
+}
+
+
+.assessment-box {
+
+    margin-top: 45px;
+
+    padding: 35px;
+
+    background: white;
+
+    border: 1px solid #d7e7e5;
+
+    display: grid;
+
+    grid-template-columns: 65px 1fr;
+
+    gap: 25px;
+
+    align-items: start;
+
+}
+
+
+.assessment-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    background: #075f67;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.assessment-box h3 {
+
+    font-size: 27px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.assessment-box p {
+
+    color: #617579;
+
+    font-size: 15px;
+
+}
+
+
+.assessment-note {
+
+    margin-top: 25px;
+
+    font-size: 13px;
+
+    font-style: italic;
+
+    color: #809194 !important;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE PUBLICATIONS
+========================================================= */
+
+
+@media (max-width: 950px) {
+
+    .selected-publications {
+
+        grid-template-columns: 1fr;
+
+        max-width: 720px;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .publication-page-hero {
+
+        min-height: 400px;
+
+        padding:
+            100px
+            25px
+            70px;
+
+    }
+
+
+    .publication-page-hero h1 {
+
+        font-size: 52px;
+
+    }
+
+
+    .publication-intro {
+
+        padding:
+            75px
+            25px
+            50px;
+
+    }
+
+
+    .publication-intro h2 {
+
+        font-size: 36px;
+
+    }
+
+
+    .selected-publications {
+
+        padding:
+            20px
+            20px
+            80px;
+
+    }
+
+
+    .publication-image {
+
+        height: 230px;
+
+    }
+
+
+    .publication-content {
+
+        padding:
+            28px 25px 32px;
+
+    }
+
+
+    .publication-content h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    .assessment-section {
+
+        padding:
+            75px 25px;
+
+    }
+
+
+    .assessment-inner h2 {
+
+        font-size: 37px;
+
+    }
+
+
+    .assessment-box {
+
+        grid-template-columns: 1fr;
+
+        padding: 25px;
+
+    }
+
+}
