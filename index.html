@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,22 +9,17 @@
           content="width=device-width, initial-scale=1.0">
 
     <title>
-        Parviz Tavakoli-Kolour | Marine Scientist
+        Publications | Parviz Tavakoli-Kolour
     </title>
 
     <meta name="description"
-          content="Parviz Tavakoli-Kolour — Marine Scientist and Coral Reef Ecologist.">
+          content="Scientific publications by Parviz Tavakoli-Kolour in coral reef ecology, coral thermal tolerance, acclimation, bleaching, disease, and marine ecology.">
 
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
     <style>
-
-        /* =========================================
-           RESET
-        ========================================= */
 
         * {
             margin: 0;
@@ -33,113 +27,67 @@
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
 
-
         body {
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            color: #e8f7fa;
-
-            background:
-                #031f2b;
-
+            font-family: Arial, Helvetica, sans-serif;
+            color: #173746;
+            background: #f4fbfc;
             line-height: 1.7;
-
         }
-
 
         a {
-
             text-decoration: none;
-
             color: inherit;
-
         }
 
 
-        /* =========================================
+        /* =========================
            NAVIGATION
-        ========================================= */
+        ========================= */
 
         nav {
-
             position: fixed;
-
             top: 0;
-
             left: 0;
-
             width: 100%;
-
             z-index: 1000;
 
             background:
-                rgba(2, 30, 42, 0.88);
+                rgba(2, 30, 42, 0.94);
 
-            backdrop-filter:
-                blur(12px);
+            backdrop-filter: blur(12px);
 
             border-bottom:
-                1px solid
-                rgba(255,255,255,0.08);
-
+                1px solid rgba(255,255,255,0.08);
         }
-
 
         .nav-container {
-
             max-width: 1200px;
-
             margin: auto;
-
-            padding:
-                12px 25px;
+            padding: 12px 25px;
 
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
-
         }
-
-
-        /* =========================================
-           PTK LOGO
-        ========================================= */
 
         .brand {
-
             display: flex;
-
             align-items: center;
-
             gap: 12px;
-
         }
 
-
         .profile-photo {
-
             width: 46px;
-
             height: 46px;
-
             border-radius: 50%;
-
             object-fit: cover;
 
             border:
-                2px solid
-                #53d5d9;
+                2px solid #53d5d9;
 
             background:
                 linear-gradient(
@@ -147,84 +95,58 @@
                     #0e7490,
                     #53d5d9
                 );
-
         }
-
 
         .brand-name {
-
             font-size: 21px;
-
             font-weight: bold;
-
             letter-spacing: 1px;
-
             color: white;
-
         }
-
 
         .brand-name span {
-
             color: #53d5d9;
-
         }
-
-
-        /* =========================================
-           NAV LINKS
-        ========================================= */
 
         .nav-links {
-
             display: flex;
-
             list-style: none;
-
             gap: 25px;
-
         }
-
 
         .nav-links a {
-
             font-size: 14px;
-
             color: #c7e5e9;
-
             transition: 0.3s;
-
         }
 
-
-        .nav-links a:hover {
-
+        .nav-links a:hover,
+        .nav-links .active {
             color: #53d5d9;
-
         }
 
 
-        /* =========================================
-           HERO
-        ========================================= */
+        /* =========================
+           PAGE HERO
+        ========================= */
 
-        .hero {
+        .page-hero {
 
-            min-height: 100vh;
-
-            position: relative;
-
-            overflow: hidden;
+            min-height: 48vh;
 
             display: flex;
-
             align-items: center;
+
+            padding:
+                130px 25px 80px;
+
+            color: white;
 
             background:
 
                 radial-gradient(
                     circle at 20% 80%,
-                    rgba(20,184,166,0.18),
+                    rgba(20,184,166,0.20),
                     transparent 35%
                 ),
 
@@ -236,514 +158,405 @@
 
                 linear-gradient(
                     180deg,
-                    #021b28 0%,
-                    #04364a 55%,
-                    #075985 100%
+                    #021b28,
+                    #075985
                 );
-
-            padding:
-                130px 25px 100px;
-
         }
 
-
-        /* underwater light */
-
-        .hero::before {
-
-            content: "";
-
-            position: absolute;
-
-            width: 700px;
-
-            height: 700px;
-
-            top: -350px;
-
-            left: 50%;
-
-            transform:
-                translateX(-50%);
-
-            background:
-                radial-gradient(
-                    ellipse,
-                    rgba(94,234,212,0.12),
-                    transparent 65%
-                );
-
-            pointer-events: none;
-
-        }
-
-
-        .hero-container {
-
-            max-width: 1200px;
-
+        .page-hero-container {
+            max-width: 1100px;
             width: 100%;
-
             margin: auto;
-
-            position: relative;
-
-            z-index: 2;
-
         }
-
-
-        .hero-content {
-
-            max-width: 850px;
-
-        }
-
 
         .eyebrow {
-
-            display: inline-block;
-
             color: #53d5d9;
-
             font-size: 14px;
-
             letter-spacing: 3px;
-
             text-transform: uppercase;
-
-            margin-bottom: 18px;
-
+            margin-bottom: 15px;
         }
 
-
-        .hero h1 {
-
-            font-size:
-                clamp(45px, 7vw, 82px);
-
-            line-height: 1.02;
-
-            font-weight: 700;
-
-            color: white;
-
-            margin-bottom: 22px;
-
+        .page-hero h1 {
+            font-size: clamp(45px, 7vw, 72px);
+            line-height: 1.05;
+            margin-bottom: 20px;
         }
 
-
-        .hero h2 {
-
-            font-size: 25px;
-
-            font-weight: 400;
-
-            color: #9de5e8;
-
-            margin-bottom: 25px;
-
-        }
-
-
-        .hero-description {
-
+        .page-hero p {
             max-width: 760px;
-
             font-size: 18px;
-
             color: #c9e9ed;
-
-            margin-bottom: 32px;
-
         }
 
 
-        /* =========================================
-           SOCIAL ICONS
-        ========================================= */
-
-        .social-icons {
-
-            display: flex;
-
-            gap: 12px;
-
-            margin-bottom: 35px;
-
-        }
-
-
-        .social-icons a {
-
-            width: 45px;
-
-            height: 45px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            border-radius: 50%;
-
-            border:
-                1px solid
-                rgba(255,255,255,0.25);
-
-            color: #d9f4f6;
-
-            background:
-                rgba(255,255,255,0.05);
-
-            font-size: 18px;
-
-            transition: 0.3s;
-
-        }
-
-
-        .social-icons a:hover {
-
-            color: #031f2b;
-
-            background: #53d5d9;
-
-            border-color: #53d5d9;
-
-            transform:
-                translateY(-4px);
-
-        }
-
-
-        /* =========================================
-           BUTTONS
-        ========================================= */
-
-        .buttons {
-
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 15px;
-
-        }
-
-
-        .button {
-
-            padding:
-                12px 25px;
-
-            border-radius: 30px;
-
-            font-weight: bold;
-
-            transition: 0.3s;
-
-        }
-
-
-        .button-primary {
-
-            background: #53d5d9;
-
-            color: #032b3b;
-
-        }
-
-
-        .button-primary:hover {
-
-            transform:
-                translateY(-3px);
-
-            background: #7de7e9;
-
-        }
-
-
-        .button-outline {
-
-            border:
-                1px solid
-                #65dce0;
-
-            color: #bceef0;
-
-        }
-
-
-        .button-outline:hover {
-
-            background:
-                rgba(83,213,217,0.12);
-
-            transform:
-                translateY(-3px);
-
-        }
-
-
-        /* =========================================
-           OCEAN DIVIDER
-        ========================================= */
-
-        .wave {
-
-            height: 80px;
-
-            margin-top: -80px;
-
-            position: relative;
-
-            z-index: 5;
-
-            background:
-                #f4fbfc;
-
-            clip-path:
-                ellipse(75% 70% at 50% 100%);
-
-        }
-
-
-        /* =========================================
-           MAIN CONTENT
-        ========================================= */
-
-        .light-section {
-
-            background:
-                #f4fbfc;
-
-            color:
-                #173746;
-
-            padding:
-                90px 25px;
-
-        }
-
+        /* =========================
+           CONTENT
+        ========================= */
 
         .container {
-
             max-width: 1100px;
-
             margin: auto;
-
         }
 
+        .section {
+            padding: 80px 25px;
+        }
 
         .section-title {
+            font-size: 36px;
+            color: #075985;
+            margin-bottom: 12px;
+        }
 
-            font-size: 38px;
-
-            color:
-                #075985;
-
-            margin-bottom: 15px;
-
+        .section-intro {
+            max-width: 780px;
+            color: #607682;
+            margin-bottom: 40px;
         }
 
 
-        .section-text {
+        /* =========================
+           FEATURED PUBLICATIONS
+        ========================= */
 
-            max-width: 760px;
-
-            color:
-                #526975;
-
-            font-size: 17px;
-
+        .featured-grid {
+            display: grid;
+            gap: 35px;
         }
 
-
-        /* =========================================
-           INTRO CARDS
-        ========================================= */
-
-        .intro-grid {
+        .publication-card {
 
             display: grid;
 
             grid-template-columns:
-                repeat(3,1fr);
+                330px 1fr;
 
-            gap: 25px;
+            background: white;
 
-            margin-top: 45px;
+            border-radius: 20px;
 
+            overflow: hidden;
+
+            border:
+                1px solid #dceff1;
+
+            box-shadow:
+                0 10px 30px
+                rgba(4,70,90,0.07);
+
+            transition: 0.3s;
+        }
+
+        .publication-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 18px 40px
+                rgba(4,70,90,0.12);
+        }
+
+        .publication-image {
+
+            min-height: 270px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #d9f3f4,
+                    #b6e4e8
+                );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+        .publication-image img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .image-placeholder {
+
+            text-align: center;
+
+            color: #287184;
+
+            padding: 30px;
+        }
+
+        .image-placeholder i {
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
+
+        .image-placeholder p {
+            font-size: 13px;
+        }
+
+        .publication-content {
+            padding: 32px;
+        }
+
+        .publication-year {
+            display: inline-block;
+
+            color: #087f8c;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            margin-bottom: 8px;
+        }
+
+        .publication-title {
+
+            font-size: 23px;
+
+            line-height: 1.35;
+
+            color: #164e63;
+
+            margin-bottom: 12px;
+        }
+
+        .authors {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 10px;
+        }
+
+        .journal {
+            font-size: 14px;
+            font-style: italic;
+            color: #475569;
+            margin-bottom: 18px;
+        }
+
+        .description {
+            color: #526975;
+            margin-bottom: 20px;
+        }
+
+        .finding-box {
+
+            background:
+                #eef9fa;
+
+            border-left:
+                4px solid #0891b2;
+
+            padding:
+                16px 18px;
+
+            margin-bottom: 22px;
+
+            border-radius:
+                0 10px 10px 0;
+        }
+
+        .finding-box strong {
+
+            display: block;
+
+            color: #075985;
+
+            margin-bottom: 5px;
+
+            font-size: 13px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+        }
+
+        .finding-box p {
+            color: #45636e;
+            font-size: 14px;
+        }
+
+        .read-paper {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding:
+                9px 18px;
+
+            border-radius:
+                25px;
+
+            background:
+                #075985;
+
+            color: white;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .read-paper:hover {
+            background: #0891b2;
+            transform: translateY(-2px);
         }
 
 
-        .intro-card {
+        /* =========================
+           COMPLETE PUBLICATIONS
+        ========================= */
+
+        .complete-section {
+            background: white;
+        }
+
+        .publication-list {
+            display: grid;
+            gap: 0;
+        }
+
+        .publication-item {
+
+            padding:
+                25px 0;
+
+            border-bottom:
+                1px solid #dceff1;
+        }
+
+        .publication-item:last-child {
+            border-bottom: none;
+        }
+
+        .publication-number {
+
+            display: inline-flex;
+
+            width: 30px;
+            height: 30px;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
 
             background:
-                white;
+                #e3f5f6;
+
+            color:
+                #075985;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            margin-right: 10px;
+
+            vertical-align: top;
+        }
+
+        .publication-item-title {
+
+            display: inline;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            color: #164e63;
+        }
+
+        .publication-item-authors {
+
+            margin-top: 7px;
+
+            margin-left: 42px;
+
+            color: #607682;
+
+            font-size: 14px;
+        }
+
+        .publication-item-journal {
+
+            margin-top: 4px;
+
+            margin-left: 42px;
+
+            color: #526975;
+
+            font-size: 14px;
+
+            font-style: italic;
+        }
+
+        .doi {
+
+            display: inline-block;
+
+            margin-top: 8px;
+
+            margin-left: 42px;
+
+            color: #087f8c;
+
+            font-size: 13px;
+        }
+
+        .doi:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           REPORT
+        ========================= */
+
+        .report-section {
+            background: #eaf7f8;
+        }
+
+        .report-card {
+
+            background: white;
 
             padding: 30px;
 
             border-radius: 18px;
 
-            border:
-                1px solid
-                #dceff1;
-
-            transition: 0.3s;
-
-        }
-
-
-        .intro-card:hover {
-
-            transform:
-                translateY(-5px);
+            border-left:
+                5px solid #0891b2;
 
             box-shadow:
-                0 15px 35px
-                rgba(4,70,90,0.10);
-
+                0 10px 25px
+                rgba(4,70,90,0.06);
         }
 
-
-        .intro-card i {
-
-            font-size: 30px;
-
-            color:
-                #0891b2;
-
-            margin-bottom: 20px;
-
-        }
-
-
-        .intro-card h3 {
-
-            color:
-                #075985;
-
+        .report-card h3 {
+            color: #164e63;
             margin-bottom: 10px;
+        }
 
+        .report-card p {
+            color: #607682;
         }
 
 
-        .intro-card p {
-
-            color:
-                #607682;
-
-            font-size: 15px;
-
-        }
-
-
-        /* =========================================
-           AFFILIATIONS
-        ========================================= */
-
-        .affiliations {
-
-            background:
-                #eaf7f8;
-
-            padding:
-                80px 25px;
-
-            text-align: center;
-
-        }
-
-
-        .affiliation-grid {
-
-            display: flex;
-
-            justify-content: center;
-
-            flex-wrap: wrap;
-
-            gap: 30px;
-
-            margin-top: 40px;
-
-        }
-
-
-        .university {
-
-            width: 230px;
-
-            min-height: 170px;
-
-            background:
-                white;
-
-            border-radius: 18px;
-
-            padding: 25px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: center;
-
-            justify-content: center;
-
-            border:
-                1px solid
-                #d6ecee;
-
-            transition: 0.3s;
-
-        }
-
-
-        .university:hover {
-
-            transform:
-                translateY(-5px);
-
-            box-shadow:
-                0 12px 30px
-                rgba(0,0,0,0.08);
-
-        }
-
-
-        .university img {
-
-            max-width: 115px;
-
-            max-height: 80px;
-
-            object-fit: contain;
-
-            margin-bottom: 18px;
-
-        }
-
-
-        .university-name {
-
-            color:
-                #294d5a;
-
-            font-size: 14px;
-
-            font-weight: bold;
-
-        }
-
-
-        /* =========================================
+        /* =========================
            FOOTER
-        ========================================= */
+        ========================= */
 
         footer {
 
@@ -753,51 +566,40 @@
             color:
                 #8fb9c1;
 
-            text-align: center;
+            text-align:
+                center;
 
             padding:
                 30px 20px;
 
-            font-size: 13px;
-
+            font-size:
+                13px;
         }
 
 
-        /* =========================================
+        /* =========================
            MOBILE
-        ========================================= */
+        ========================= */
 
         @media (max-width: 850px) {
 
             .nav-links {
-
                 display: none;
-
             }
 
-
-            .intro-grid {
-
+            .publication-card {
                 grid-template-columns: 1fr;
-
             }
 
+            .publication-image {
+                min-height: 230px;
+            }
 
-            .hero h1 {
-
+            .page-hero h1 {
                 font-size: 50px;
-
-            }
-
-
-            .hero h2 {
-
-                font-size: 21px;
-
             }
 
         }
-
 
     </style>
 
@@ -807,45 +609,30 @@
 <body>
 
 
-<!-- =========================================
+<!-- =========================
      NAVIGATION
-========================================= -->
+========================= -->
 
 <nav>
 
     <div class="nav-container">
 
-
         <a href="index.html"
            class="brand">
-
-
-            <!--
-
-                Replace this file with your photo:
-
-                images/profile.jpg
-
-            -->
 
             <img
                 src="images/profile.jpg"
                 alt="Parviz Tavakoli-Kolour"
                 class="profile-photo">
 
-
             <div class="brand-name">
-
                 <span>PTK</span>
-
             </div>
-
 
         </a>
 
 
         <ul class="nav-links">
-
 
             <li>
                 <a href="index.html">
@@ -853,13 +640,11 @@
                 </a>
             </li>
 
-
             <li>
                 <a href="about.html">
                     About
                 </a>
             </li>
-
 
             <li>
                 <a href="research.html">
@@ -867,13 +652,12 @@
                 </a>
             </li>
 
-
             <li>
-                <a href="publications.html">
+                <a href="publications.html"
+                   class="active">
                     Publications
                 </a>
             </li>
-
 
             <li>
                 <a href="cv.html">
@@ -881,20 +665,17 @@
                 </a>
             </li>
 
-
             <li>
                 <a href="gallery.html">
                     Gallery
                 </a>
             </li>
 
-
             <li>
                 <a href="contact.html">
                     Contact
                 </a>
             </li>
-
 
         </ul>
 
@@ -903,163 +684,1098 @@
 </nav>
 
 
-<!-- =========================================
-     HERO
-========================================= -->
+<!-- =========================
+     PAGE HEADER
+========================= -->
 
-<section class="hero">
+<section class="page-hero">
 
+    <div class="page-hero-container">
 
-    <div class="hero-container">
+        <div class="eyebrow">
+            Scientific Publications
+        </div>
 
+        <h1>
+            Publications
+        </h1>
 
-        <div class="hero-content">
+        <p>
 
+            Research on coral reef ecology, coral thermal tolerance,
+            acclimation and adaptation, bleaching, coral diseases,
+            mesophotic environments, and marine biodiversity.
 
-            <div class="eyebrow">
+        </p>
 
-                Marine Science · Coral Reefs
+    </div>
 
-            </div>
-
-
-            <h1>
-
-                Parviz
-                Tavakoli-Kolour
-
-            </h1>
-
-
-            <h2>
-
-                Marine Scientist &
-                Coral Reef Ecologist
-
-            </h2>
+</section>
 
 
-            <p class="hero-description">
+<!-- =========================
+     FEATURED PUBLICATIONS
+========================= -->
 
-                I investigate how coral reefs respond to
-                environmental variability and climate change,
-                with a focus on coral thermal tolerance,
-                acclimation, adaptation, bleaching,
-                mortality, and reef resilience.
+<section class="section">
 
-            </p>
+    <div class="container">
+
+        <h2 class="section-title">
+            Selected Publications
+        </h2>
+
+        <p class="section-intro">
+
+            A selection of publications representing major themes
+            of my research. Each study is presented with its
+            scientific question, contribution, and key finding.
+
+        </p>
+
+
+        <div class="featured-grid">
 
 
             <!-- =================================
-                 ICONS ONLY
+                 PAPER 1
             ================================= -->
 
-            <div class="social-icons">
+            <article class="publication-card">
 
 
-                <!-- Google Scholar -->
+                <div class="publication-image">
 
-                <a
-                    href="https://scholar.google.com/citations?user=l_zzIt8AAAAJ&hl=en"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Google Scholar">
+                    <img
+                        src="images/publications/plasticity-depth-gradient.jpg"
+                        alt="Plasticity of shallow corals across a depth gradient"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 
-                    <i class="fa-solid fa-graduation-cap"></i>
+                    <div class="image-placeholder"
+                         style="display:none;">
 
-                </a>
+                        <i class="fa-solid fa-coral"></i>
 
+                        <p>
+                            Add paper image:<br>
+                            plasticity-depth-gradient.jpg
+                        </p>
 
-                <!-- ORCID -->
+                    </div>
 
-                <a
-                    href="https://orcid.org/0000-0003-2633-5901"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="ORCID">
-
-                    <i class="fa-brands fa-orcid"></i>
-
-                </a>
+                </div>
 
 
-                <!-- ResearchGate -->
-
-                <a
-                    href="https://www.researchgate.net/profile/Parviz-Tavakoli-Kolour-2"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="ResearchGate">
-
-                    <i class="fa-brands fa-researchgate"></i>
-
-                </a>
+                <div class="publication-content">
 
 
-                <!-- X -->
-
-                <a
-                    href="https://x.com/parviz_tavakoli"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="X">
-
-                    <i class="fa-brands fa-x-twitter"></i>
-
-                </a>
+                    <span class="publication-year">
+                        2023
+                    </span>
 
 
-                <!-- Instagram -->
+                    <h3 class="publication-title">
 
-                <a
-                    href="https://www.instagram.com/parviz_tavakoli_kolour"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Instagram">
+                        Plasticity of shallow corals
+                        across a depth gradient
 
-                    <i class="fa-brands fa-instagram"></i>
-
-                </a>
+                    </h3>
 
 
-                <!-- Email -->
+                    <p class="authors">
 
-                <a
-                    href="mailto:p.tavakoli@hotmail.com"
-                    aria-label="Email">
+                        Tavakoli-Kolour P, Sinniger F,
+                        Morita M, Hazraty-Kari S,
+                        Nakamura T, Harii S
 
-                    <i class="fa-solid fa-envelope"></i>
-
-                </a>
+                    </p>
 
 
-            </div>
+                    <p class="journal">
+
+                        Marine Pollution Bulletin 197:
+                        115060
+
+                    </p>
 
 
-            <!-- BUTTONS -->
+                    <p class="description">
 
-            <div class="buttons">
+                        This study examined the capacity of shallow
+                        corals to respond plastically to environmental
+                        conditions across a depth gradient.
 
-
-                <a
-                    href="research.html"
-                    class="button button-primary">
-
-                    Explore Research
-
-                </a>
+                    </p>
 
 
-                <a
-                    href="gallery.html"
-                    class="button button-outline">
+                    <div class="finding-box">
 
-                    Field Gallery
+                        <strong>
+                            Key focus
+                        </strong>
 
-                </a>
+                        <p>
+
+                            The study provides evidence for
+                            environmentally associated plasticity
+                            in shallow corals across depth.
+
+                        </p>
+
+                    </div>
 
 
-            </div>
+                    <a
+                        href="https://doi.org/10.1016/j.marpolbul.2023.115792"
+                        target="_blank"
+                        rel="noopener"
+                        class="read-paper">
+
+                        Read Paper
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================
+                 PAPER 2
+            ================================= -->
+
+            <article class="publication-card">
+
+
+                <div class="publication-image">
+
+                    <img
+                        src="images/publications/thermal-thresholds-depth.jpg"
+                        alt="Variability in thermal stress thresholds of corals across depths"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+                    <div class="image-placeholder"
+                         style="display:none;">
+
+                        <i class="fa-solid fa-temperature-high"></i>
+
+                        <p>
+                            Add paper image:<br>
+                            thermal-thresholds-depth.jpg
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="publication-content">
+
+
+                    <span class="publication-year">
+                        2023
+                    </span>
+
+
+                    <h3 class="publication-title">
+
+                        Variability in thermal stress
+                        thresholds of corals across depths
+
+                    </h3>
+
+
+                    <p class="authors">
+
+                        Tavakoli-Kolour P, Sinniger F,
+                        Morita M, Nakamura T, Harii S
+
+                    </p>
+
+
+                    <p class="journal">
+
+                        Frontiers in Marine Science 10:
+                        1210662
+
+                    </p>
+
+
+                    <p class="description">
+
+                        This study investigated how coral thermal
+                        stress thresholds vary across environmental
+                        depth gradients.
+
+                    </p>
+
+
+                    <div class="finding-box">
+
+                        <strong>
+                            Key finding
+                        </strong>
+
+                        <p>
+
+                            Coral thermal tolerance can vary
+                            among populations experiencing
+                            different depth environments.
+
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="https://doi.org/10.3389/fmars.2023.1210662"
+                        target="_blank"
+                        rel="noopener"
+                        class="read-paper">
+
+                        Read Paper
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================
+                 PAPER 3
+            ================================= -->
+
+            <article class="publication-card">
+
+
+                <div class="publication-image">
+
+                    <img
+                        src="images/publications/mesophotic-acclimation.jpg"
+                        alt="Acclimation potential of Acropora to mesophotic environment"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+                    <div class="image-placeholder"
+                         style="display:none;">
+
+                        <i class="fa-solid fa-water"></i>
+
+                        <p>
+                            Add paper image:<br>
+                            mesophotic-acclimation.jpg
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="publication-content">
+
+
+                    <span class="publication-year">
+                        2023
+                    </span>
+
+
+                    <h3 class="publication-title">
+
+                        Acclimation potential of
+                        <i>Acropora</i> to mesophotic environment
+
+                    </h3>
+
+
+                    <p class="authors">
+
+                        Tavakoli-Kolour P, Sinniger F,
+                        Morita M, Harii S
+
+                    </p>
+
+
+                    <p class="journal">
+
+                        Marine Pollution Bulletin 188:
+                        114698
+
+                    </p>
+
+
+                    <p class="description">
+
+                        This research examined the ability of
+                        shallow-water Acropora corals to respond
+                        to mesophotic environmental conditions.
+
+                    </p>
+
+
+                    <div class="finding-box">
+
+                        <strong>
+                            Key focus
+                        </strong>
+
+                        <p>
+
+                            The study demonstrates the potential
+                            importance of coral acclimation when
+                            moving across depth-associated
+                            environmental gradients.
+
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="https://doi.org/10.1016/j.marpolbul.2023.114698"
+                        target="_blank"
+                        rel="noopener"
+                        class="read-paper">
+
+                        Read Paper
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================
+                 PAPER 4
+            ================================= -->
+
+            <article class="publication-card">
+
+
+                <div class="publication-image">
+
+                    <img
+                        src="images/publications/resistant-larvae.jpg"
+                        alt="Response of resistant larvae of Acropora tenuis to future thermal stress"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+                    <div class="image-placeholder"
+                         style="display:none;">
+
+                        <i class="fa-solid fa-seedling"></i>
+
+                        <p>
+                            Add paper image:<br>
+                            resistant-larvae.jpg
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="publication-content">
+
+
+                    <span class="publication-year">
+                        2023
+                    </span>
+
+
+                    <h3 class="publication-title">
+
+                        Response of resistant larvae of the coral
+                        <i>Acropora tenuis</i> to future thermal stress
+
+                    </h3>
+
+
+                    <p class="authors">
+
+                        Hazraty-Kari S, Morita M,
+                        Tavakoli-Kolour P, Harii S
+
+                    </p>
+
+
+                    <p class="journal">
+
+                        Marine Pollution Bulletin 192:
+                        115060
+
+                    </p>
+
+
+                    <p class="description">
+
+                        This study investigated the response of
+                        thermally resistant coral larvae to
+                        future thermal conditions.
+
+                    </p>
+
+
+                    <div class="finding-box">
+
+                        <strong>
+                            Key focus
+                        </strong>
+
+                        <p>
+
+                            The work highlights the importance of
+                            thermal history and larval resistance
+                            when considering coral responses to
+                            future warming.
+
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="https://doi.org/10.1016/j.marpolbul.2023.115060"
+                        target="_blank"
+                        rel="noopener"
+                        class="read-paper">
+
+                        Read Paper
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================
+                 PAPER 5
+            ================================= -->
+
+            <article class="publication-card">
+
+
+                <div class="publication-image">
+
+                    <img
+                        src="images/publications/juvenile-thermal-stress.jpg"
+                        alt="Juvenile coral response to consecutive thermal stress"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+                    <div class="image-placeholder"
+                         style="display:none;">
+
+                        <i class="fa-solid fa-temperature-high"></i>
+
+                        <p>
+                            Add paper image:<br>
+                            juvenile-thermal-stress.jpg
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="publication-content">
+
+
+                    <span class="publication-year">
+                        2023
+                    </span>
+
+
+                    <h3 class="publication-title">
+
+                        Reactions of juvenile coral to
+                        three years of consecutive thermal stress
+
+                    </h3>
+
+
+                    <p class="authors">
+
+                        Hazraty-Kari S, Morita M,
+                        Tavakoli-Kolour P, Nakamura T, Harii S
+
+                    </p>
+
+
+                    <p class="journal">
+
+                        Science of the Total Environment 866:
+                        161227
+
+                    </p>
+
+
+                    <p class="description">
+
+                        This research examined how juvenile corals
+                        respond to repeated thermal stress over
+                        multiple years.
+
+                    </p>
+
+
+                    <div class="finding-box">
+
+                        <strong>
+                            Key focus
+                        </strong>
+
+                        <p>
+
+                            The study emphasizes the importance
+                            of repeated thermal exposure when
+                            evaluating coral responses to warming.
+
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="https://doi.org/10.1016/j.scitotenv.2022.161227"
+                        target="_blank"
+                        rel="noopener"
+                        class="read-paper">
+
+                        Read Paper
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================
+                 PAPER 6
+            ================================= -->
+
+            <article class="publication-card">
+
+
+                <div class="publication-image">
+
+                    <img
+                        src="images/publications/acropora-resilience.jpg"
+                        alt="Acropora thermal resilience"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+                    <div class="image-placeholder"
+                         style="display:none;">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <p>
+                            Add paper image:<br>
+                            acropora-resilience.jpg
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="publication-content">
+
+
+                    <span class="publication-year">
+                        2022
+                    </span>
+
+
+                    <h3 class="publication-title">
+
+                        Adaptations by the coral
+                        <i>Acropora tenuis</i> confer resilience
+                        to future thermal stress
+
+                    </h3>
+
+
+                    <p class="authors">
+
+                        Hazraty-Kari S, Tavakoli-Kolour P,
+                        Kitanobo S, Nakamura T, Morita M
+
+                    </p>
+
+
+                    <p class="journal">
+
+                        Communications Biology 5:
+                        1–10
+
+                    </p>
+
+
+                    <p class="description">
+
+                        This study investigated how adaptation
+                        in Acropora tenuis contributes to resilience
+                        under future thermal stress.
+
+                    </p>
+
+
+                    <div class="finding-box">
+
+                        <strong>
+                            Key finding
+                        </strong>
+
+                        <p>
+
+                            The research demonstrates a link
+                            between coral adaptation and
+                            resilience to future thermal
+                            conditions.
+
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="https://doi.org/10.1038/s42003-022-04309-5"
+                        target="_blank"
+                        rel="noopener"
+                        class="read-paper">
+
+                        Read Paper
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================
+                 PAPER 7
+            ================================= -->
+
+            <article class="publication-card">
+
+
+                <div class="publication-image">
+
+                    <img
+                        src="images/publications/persian-gulf-diseases.jpg"
+                        alt="Coral diseases in the northern Persian Gulf"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+                    <div class="image-placeholder"
+                         style="display:none;">
+
+                        <i class="fa-solid fa-water"></i>
+
+                        <p>
+                            Add paper image:<br>
+                            persian-gulf-diseases.jpg
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="publication-content">
+
+
+                    <span class="publication-year">
+                        2021
+                    </span>
+
+
+                    <h3 class="publication-title">
+
+                        Baseline assessment of coral diseases
+                        in an environmentally extreme environment
+                        of the northern Persian Gulf
+
+                    </h3>
+
+
+                    <p class="authors">
+
+                        Hazraty-Kari S, Tavakoli-Kolour P,
+                        Das RR, Farhadi M, Barkhordari-Ahmadi A,
+                        Yahyavi M, Rezai H
+
+                    </p>
+
+
+                    <p class="journal">
+
+                        Marine Pollution Bulletin 171:
+                        112707
+
+                    </p>
+
+
+                    <p class="description">
+
+                        This study established a baseline assessment
+                        of coral diseases in the environmentally
+                        extreme northern Persian Gulf.
+
+                    </p>
+
+
+                    <div class="finding-box">
+
+                        <strong>
+                            Key focus
+                        </strong>
+
+                        <p>
+
+                            The work provides an important
+                            baseline for understanding coral
+                            disease occurrence in an extreme
+                            reef environment.
+
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="https://doi.org/10.1016/j.marpolbul.2021.112707"
+                        target="_blank"
+                        rel="noopener"
+                        class="read-paper">
+
+                        Read Paper
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================
+                 PAPER 8
+            ================================= -->
+
+            <article class="publication-card">
+
+
+                <div class="publication-image">
+
+                    <img
+                        src="images/publications/persian-gulf-bleaching.jpg"
+                        alt="Coral bleaching in the northern Persian Gulf"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+                    <div class="image-placeholder"
+                         style="display:none;">
+
+                        <i class="fa-solid fa-sun"></i>
+
+                        <p>
+                            Add paper image:<br>
+                            persian-gulf-bleaching.jpg
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="publication-content">
+
+
+                    <span class="publication-year">
+                        2021
+                    </span>
+
+
+                    <h3 class="publication-title">
+
+                        Four consecutive coral bleaching events
+                        in the Northern Persian Gulf:
+                        2014–2017
+
+                    </h3>
+
+
+                    <p class="authors">
+
+                        Kavousi J, Tavakoli-Kolour P,
+                        Hazraty-Kari S
+
+                    </p>
+
+
+                    <p class="journal">
+
+                        Annals of Marine Science 5(1):
+                        007–014
+
+                    </p>
+
+
+                    <p class="description">
+
+                        This study documented repeated coral
+                        bleaching events in the northern
+                        Persian Gulf across four consecutive years.
+
+                    </p>
+
+
+                    <div class="finding-box">
+
+                        <strong>
+                            Key finding
+                        </strong>
+
+                        <p>
+
+                            Repeated bleaching occurred within
+                            one of the world's most environmentally
+                            extreme coral reef regions.
+
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="https://doi.org/10.17352/ams.000025"
+                        target="_blank"
+                        rel="noopener"
+                        class="read-paper">
+
+                        Read Paper
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================
+                 PAPER 9
+            ================================= -->
+
+            <article class="publication-card">
+
+
+                <div class="publication-image">
+
+                    <img
+                        src="images/publications/qeshm-growth-anomalies.jpg"
+                        alt="Growth anomalies in Persian Gulf corals"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+                    <div class="image-placeholder"
+                         style="display:none;">
+
+                        <i class="fa-solid fa-coral"></i>
+
+                        <p>
+                            Add paper image:<br>
+                            qeshm-growth-anomalies.jpg
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="publication-content">
+
+
+                    <span class="publication-year">
+                        2015
+                    </span>
+
+
+                    <h3 class="publication-title">
+
+                        Outbreak of growth anomalies in coral
+                        communities of Qeshm Island,
+                        Persian Gulf
+
+                    </h3>
+
+
+                    <p class="authors">
+
+                        Tavakoli-Kolour P, Kavousi J,
+                        Rezai H
+
+                    </p>
+
+
+                    <p class="journal">
+
+                        International Aquatic Research 7:
+                        151–156
+
+                    </p>
+
+
+                    <p class="description">
+
+                        This study documented an outbreak of
+                        growth anomalies within coral communities
+                        of Qeshm Island.
+
+                    </p>
+
+
+                    <div class="finding-box">
+
+                        <strong>
+                            Key focus
+                        </strong>
+
+                        <p>
+
+                            The study contributes to the early
+                            documentation of coral health
+                            disturbances in the Persian Gulf.
+
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="https://doi.org/10.1007/s40071-015-0100-3"
+                        target="_blank"
+                        rel="noopener"
+                        class="read-paper">
+
+                        Read Paper
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================
+                 PAPER 10
+            ================================= -->
+
+            <article class="publication-card">
+
+
+                <div class="publication-image">
+
+                    <img
+                        src="images/publications/persian-gulf-bleaching-2012.jpg"
+                        alt="Mass coral bleaching in the northern Persian Gulf"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+                    <div class="image-placeholder"
+                         style="display:none;">
+
+                        <i class="fa-solid fa-sun"></i>
+
+                        <p>
+                            Add paper image:<br>
+                            persian-gulf-bleaching-2012.jpg
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="publication-content">
+
+
+                    <span class="publication-year">
+                        2014
+                    </span>
+
+
+                    <h3 class="publication-title">
+
+                        Mass coral bleaching in the
+                        northern Persian Gulf, 2012
+
+                    </h3>
+
+
+                    <p class="authors">
+
+                        Kavousi J, Tavakoli-Kolour P,
+                        Mohammadizadeh M, Bahrami A,
+                        Barkhordari
+
+                    </p>
+
+
+                    <p class="journal">
+
+                        Scientia Marina 78(3)
+
+                    </p>
+
+
+                    <p class="description">
+
+                        This study documented a major coral
+                        bleaching event in the northern
+                        Persian Gulf during 2012.
+
+                    </p>
+
+
+                    <div class="finding-box">
+
+                        <strong>
+                            Key contribution
+                        </strong>
+
+                        <p>
+
+                            The work provides early evidence
+                            documenting severe coral bleaching
+                            in this environmentally extreme
+                            reef system.
+
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="http://dx.doi.org/10.3989/scimar.03914.16A"
+                        target="_blank"
+                        rel="noopener"
+                        class="read-paper">
+
+                        Read Paper
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
 
 
         </div>
@@ -1069,104 +1785,992 @@
 </section>
 
 
-<!-- OCEAN WAVE -->
+<!-- =========================
+     COMPLETE PUBLICATIONS
+========================= -->
 
-<div class="wave"></div>
-
-
-<!-- =========================================
-     INTRODUCTION
-========================================= -->
-
-<section class="light-section">
-
+<section class="section complete-section">
 
     <div class="container">
 
 
         <h2 class="section-title">
-
-            Understanding Coral Reefs
-            in a Changing Ocean
-
+            Complete Publications
         </h2>
 
 
-        <p class="section-text">
+        <p class="section-intro">
 
-            My research combines field ecology, controlled
-            experiments, environmental monitoring, and
-            quantitative approaches to understand how corals
-            respond to environmental stress across different
-            habitats and geographic regions.
+            Complete list of peer-reviewed scientific publications.
 
         </p>
 
 
-        <div class="intro-grid">
+        <div class="publication-list">
 
 
-            <!-- CARD 1 -->
+            <!-- 2023 -->
 
-            <div class="intro-card">
+            <article class="publication-item">
 
-                <i class="fa-solid fa-temperature-high"></i>
+                <span class="publication-number">1</span>
 
-                <h3>
-                    Coral Physiology
+                <h3 class="publication-item-title">
+
+                    Plasticity of shallow corals across a depth gradient
+
                 </h3>
 
-                <p>
+                <p class="publication-item-authors">
 
-                    Investigating coral responses to thermal
-                    stress, environmental variability,
-                    and marine heatwaves.
+                    Tavakoli-Kolour P, Sinniger F, Morita M,
+                    Hazraty-Kari S, Nakamura T, Harii S
 
                 </p>
 
-            </div>
+                <p class="publication-item-journal">
 
-
-            <!-- CARD 2 -->
-
-            <div class="intro-card">
-
-                <i class="fa-solid fa-water"></i>
-
-                <h3>
-                    Coral Reef Ecology
-                </h3>
-
-                <p>
-
-                    Examining coral communities, bleaching,
-                    mortality, recovery, and ecological
-                    change across reef environments.
+                    Marine Pollution Bulletin (2023), 197
 
                 </p>
 
-            </div>
+                <a
+                    class="doi"
+                    href="https://doi.org/10.1016/j.marpolbul.2023.115792"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
 
 
-            <!-- CARD 3 -->
+            <article class="publication-item">
 
-            <div class="intro-card">
+                <span class="publication-number">2</span>
 
-                <i class="fa-solid fa-earth-americas"></i>
+                <h3 class="publication-item-title">
 
-                <h3>
-                    Climate Change
+                    Variability in thermal stress thresholds
+                    of corals across depths
+
                 </h3>
 
-                <p>
+                <p class="publication-item-authors">
 
-                    Understanding coral resilience and
-                    adaptation under increasing environmental
-                    variability and climate extremes.
+                    Tavakoli-Kolour P, Sinniger F, Morita M,
+                    Nakamura T, Harii S
 
                 </p>
 
-            </div>
+                <p class="publication-item-journal">
+
+                    Frontiers in Marine Science (2023), 10,
+                    1210662
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="https://doi.org/10.3389/fmars.2023.1210662"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="publication-item">
+
+                <span class="publication-number">3</span>
+
+                <h3 class="publication-item-title">
+
+                    Response of resistant larvae of the coral
+                    <i>Acropora tenuis</i> to future thermal stress
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Hazraty-Kari S, Morita M, Tavakoli-Kolour P,
+                    Harii S
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Marine Pollution Bulletin (2023), 192,
+                    115060
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="https://doi.org/10.1016/j.marpolbul.2023.115060"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="publication-item">
+
+                <span class="publication-number">4</span>
+
+                <h3 class="publication-item-title">
+
+                    Survey of Black Band Disease-affected
+                    scleractinian corals via drone-based
+                    observations in Okinawa, Japan
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Das RR, Tavakoli-Kolour P, Hazraty-Kari S,
+                    Reimer JD
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Journal of Threatened Taxa (2023), 15(6),
+                    23397–23402
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="https://doi.org/10.11609/jott.8215.15.6.23397-23402"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="publication-item">
+
+                <span class="publication-number">5</span>
+
+                <h3 class="publication-item-title">
+
+                    Reactions of juvenile coral to three years
+                    of consecutive thermal stress
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Hazraty-Kari S, Morita M, Tavakoli-Kolour P,
+                    Nakamura T, Harii S
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Science of the Total Environment (2023),
+                    866, 161227
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="https://doi.org/10.1016/j.scitotenv.2022.161227"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="publication-item">
+
+                <span class="publication-number">6</span>
+
+                <h3 class="publication-item-title">
+
+                    Acclimation potential of
+                    <i>Acropora</i> to mesophotic environment
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Tavakoli-Kolour P, Sinniger F, Morita M,
+                    Harii S
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Marine Pollution Bulletin (2023), 188,
+                    114698
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="https://doi.org/10.1016/j.marpolbul.2023.114698"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <!-- 2022 -->
+
+            <article class="publication-item">
+
+                <span class="publication-number">7</span>
+
+                <h3 class="publication-item-title">
+
+                    Adaptations by the coral
+                    <i>Acropora tenuis</i> confer resilience
+                    to future thermal stress
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Hazraty-Kari S, Tavakoli-Kolour P,
+                    Kitanobo S, Nakamura T, Morita M
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Communications Biology (2022), 5
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="https://doi.org/10.1038/s42003-022-04309-5"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="publication-item">
+
+                <span class="publication-number">8</span>
+
+                <h3 class="publication-item-title">
+
+                    Genetic species identification and population
+                    structure of grouper <i>Epinephelus coioides</i>
+                    collected from fish markets along the Persian
+                    Gulf and the Oman Sea
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Tavakoli-Kolour P, Farhadi A, Ajdari A,
+                    Bagheri D, Hazraty-Kari S, Ghasemi A,
+                    Vazirzadeh A
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    PeerJ (2022), 10, e14179
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="https://doi.org/10.7717/peerj.14179"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="publication-item">
+
+                <span class="publication-number">9</span>
+
+                <h3 class="publication-item-title">
+
+                    Four-Year Field Survey of Black Band Disease
+                    and Skeletal Growth Anomalies in Encrusting
+                    <i>Montipora</i> spp. Corals around Sesoko Island,
+                    Okinawa
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Das RR, Wada H, Masucci GD, Singh T,
+                    Tavakoli-Kolour P, Wada N, Tang SL,
+                    Yamashiro H, Reimer JD
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Diversity (2022), 14(1), 32
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="https://doi.org/10.3390/d14010032"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <!-- 2021 -->
+
+            <article class="publication-item">
+
+                <span class="publication-number">10</span>
+
+                <h3 class="publication-item-title">
+
+                    Baseline assessment of coral diseases in an
+                    environmentally extreme environment of the
+                    northern Persian Gulf
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Hazraty-Kari S, Tavakoli-Kolour P, Das RR,
+                    Farhadi M, Barkhordari-Ahmadi A,
+                    Yahyavi M, Rezai H
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Marine Pollution Bulletin (2021), 171, 112707
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="https://doi.org/10.1016/j.marpolbul.2021.112707"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="publication-item">
+
+                <span class="publication-number">11</span>
+
+                <h3 class="publication-item-title">
+
+                    Four consecutive coral bleaching events in the
+                    Northern Persian Gulf: 2014–2017
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Kavousi J, Tavakoli-Kolour P,
+                    Hazraty-Kari S
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Annals of Marine Science (2021), 5(1), 007–014
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="https://doi.org/10.17352/ams.000025"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <!-- 2020 -->
+
+            <article class="publication-item">
+
+                <span class="publication-number">12</span>
+
+                <h3 class="publication-item-title">
+
+                    Corallivory and algal dynamics on some coral
+                    reefs in the Persian Gulf
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Kavousi J, Tavakoli-Kolour P,
+                    Hazraty-Kari S
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Global Journal of Ecology (2020), 5(1),
+                    122–128
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="https://doi.org/10.17352/gje.000031"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <!-- 2019 -->
+
+            <article class="publication-item">
+
+                <span class="publication-number">13</span>
+
+                <h3 class="publication-item-title">
+
+                    New records of coral diseases in the
+                    Persian Gulf
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Tavakoli-Kolour P, Hazraty-Kari S
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Journal of Threatened Taxa (2019),
+                    11(14), 14912–14913
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="https://doi.org/10.11609/jott.4226.11.14.14912-14913"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <!-- 2018 -->
+
+            <article class="publication-item">
+
+                <span class="publication-number">14</span>
+
+                <h3 class="publication-item-title">
+
+                    Molecular identification and phylogenetic
+                    relationships of Coleoidea from the Persian
+                    Gulf and Oman Sea reveals a case of cryptic
+                    diversity
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Khatami S, Tavakoli-Kolour P,
+                    Valinassab T, Anderson FE, Farhadi A
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Molluscan Research (2018), 38(2), 177–185
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="https://doi.org/10.1080/13235818.2017.1381062"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <!-- 2017 -->
+
+            <article class="publication-item">
+
+                <span class="publication-number">15</span>
+
+                <h3 class="publication-item-title">
+
+                    Length-weight relationships of three fish species
+                    of coral reef fishes from the northeastern
+                    Persian Gulf
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Hazraty-Kari S, Tavakoli-Kolour P
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Journal of Applied Ichthyology (2017),
+                    33(6), 1306–1307
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="https://doi.org/10.1111/jai.13484"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="publication-item">
+
+                <span class="publication-number">16</span>
+
+                <h3 class="publication-item-title">
+
+                    Competitional settlement of brown alga
+                    <i>Iyengaria stellata</i> and soft coral
+                    <i>Zoanthous sansibaricus</i> on muddy and
+                    muddy-rubble intertidal substrate in Hormuz Island
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Bahmani G, Alavi-Yeganeh MS, Seyfabadi SJ,
+                    Tavakoli-Kolour P
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Journal of Fisheries Science and Technology
+                    (2017), 6(1), 12–20
+
+                </p>
+
+            </article>
+
+
+            <!-- 2016 -->
+
+            <article class="publication-item">
+
+                <span class="publication-number">17</span>
+
+                <h3 class="publication-item-title">
+
+                    Nudibranchs from the Northern Persian Gulf
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Rezai H, Mohtarami SA, Dehghani H,
+                    Tavakoli-Kolour P, Bargahi HR, Kabiri K
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Journal of the Persian Gulf (2016),
+                    7(23–24), 71–78
+
+                </p>
+
+            </article>
+
+
+            <!-- 2015 -->
+
+            <article class="publication-item">
+
+                <span class="publication-number">18</span>
+
+                <h3 class="publication-item-title">
+
+                    Outbreak of growth anomalies in coral
+                    communities of Qeshm Island, Persian Gulf
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Tavakoli-Kolour P, Kavousi J, Rezai H
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    International Aquatic Research (2015),
+                    7, 151–156
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="https://doi.org/10.1007/s40071-015-0100-3"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="publication-item">
+
+                <span class="publication-number">19</span>
+
+                <h3 class="publication-item-title">
+
+                    First record of <i>Cephalopholis formosa</i>
+                    in the Persian Gulf
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Tavakoli-Kolour P, Khatami S,
+                    Barkhordari A, Farhadi A
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Journal of Applied Ichthyology (2015)
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="https://doi.org/10.1111/jai.12636"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <!-- 2014 -->
+
+            <article class="publication-item">
+
+                <span class="publication-number">20</span>
+
+                <h3 class="publication-item-title">
+
+                    Mass coral bleaching in the northern
+                    Persian Gulf, 2012
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Kavousi J, Tavakoli-Kolour P,
+                    Mohammadizadeh M, Bahrami A, Barkhordari
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Scientia Marina (2014), 78(3)
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="http://dx.doi.org/10.3989/scimar.03914.16A"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="publication-item">
+
+                <span class="publication-number">21</span>
+
+                <h3 class="publication-item-title">
+
+                    Identification and assessment of anthropogenic
+                    impacts on species richness of coral reef fishes
+                    in Larak Island, Persian Gulf
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Khatami S, Valinassab T,
+                    Tavakoli-Kolour P
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    International Journal of Marine Science (2014)
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="https://doi.org/10.5376/ijms.2014.04.0053"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="publication-item">
+
+                <span class="publication-number">22</span>
+
+                <h3 class="publication-item-title">
+
+                    The first record of Bobtail Squid,
+                    <i>Euprymna hyllebergi</i>, from the Persian Gulf
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Khatami S, Sareban H, Valinassab T,
+                    Esmailzadeh A, Tavakoli-Kolour P
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Iranian Journal of Fisheries Science (2014),
+                    13(4), 1082–1085
+
+                </p>
+
+            </article>
+
+
+            <!-- 2013 -->
+
+            <article class="publication-item">
+
+                <span class="publication-number">23</span>
+
+                <h3 class="publication-item-title">
+
+                    Coral reefs and community around Larak Island
+                    (Persian Gulf)
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Mohammadizadeh M, Tavakoli-Kolour P,
+                    Rezai H
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Caspian Journal of Applied Science (2013),
+                    2(11)
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="http://hdl.handle.net/1834/40398"
+                    target="_blank"
+                    rel="noopener">
+
+                    Article ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="publication-item">
+
+                <span class="publication-number">24</span>
+
+                <h3 class="publication-item-title">
+
+                    Mass mortality of <i>Porites</i> corals on
+                    Northern Persian Gulf reefs due to
+                    sediment-microbial interactions
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Kavousi J, Tavakoli-Kolour P,
+                    Bahrami A, Barkhodari A
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    International Journal of Marine Science (2013),
+                    3, 306–310
+
+                </p>
+
+                <a
+                    class="doi"
+                    href="https://doi.org/10.5376/ijms.2013.03.0038"
+                    target="_blank"
+                    rel="noopener">
+
+                    DOI ↗
+
+                </a>
+
+            </article>
+
+
+            <article class="publication-item">
+
+                <span class="publication-number">25</span>
+
+                <h3 class="publication-item-title">
+
+                    A study on diet composition and feeding habitats
+                    of <i>Sillago sihama</i> in coastal waters of
+                    Bandar Abbas
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Mohammadizadeh F, Tavakoli-Kolour P,
+                    Khajkeramaldini M, Mohammadizadeh M,
+                    Bahri AH
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Journal of Aquatic Animals and Fisheries (2013)
+
+                </p>
+
+            </article>
+
+
+            <!-- 2012 -->
+
+            <article class="publication-item">
+
+                <span class="publication-number">26</span>
+
+                <h3 class="publication-item-title">
+
+                    Diversity of coral reef fishes in Larak Island,
+                    Persian Gulf
+
+                </h3>
+
+                <p class="publication-item-authors">
+
+                    Khatami S, Valinassab T,
+                    Tavakoli-Kolour P, Yahyavi M, Behzadi S
+
+                </p>
+
+                <p class="publication-item-journal">
+
+                    Journal of Animal Environment (2012), 4(1)
+
+                </p>
+
+            </article>
 
 
         </div>
@@ -1176,74 +2780,57 @@
 </section>
 
 
-<!-- =========================================
-     AFFILIATIONS
-========================================= -->
+<!-- =========================
+     SCIENTIFIC ASSESSMENT
+========================= -->
 
-<section class="affiliations">
-
+<section class="section report-section">
 
     <div class="container">
 
-
         <h2 class="section-title">
-
-            Academic Affiliations
-
+            International Scientific Assessment
         </h2>
 
+        <p class="section-intro">
 
-        <p class="section-text"
-           style="margin:auto;">
-
-            Research institutions and academic environments
-            contributing to my scientific career.
+            Contribution to an international scientific
+            assessment of tropical and subtropical coral reefs.
 
         </p>
 
 
-        <div class="affiliation-grid">
+        <div class="report-card">
 
+            <h3>
 
-            <!-- University of the Ryukyus -->
+                Subchapter 5d:
+                Tropical and Subtropical Coral Reefs
 
-            <div class="university">
+            </h3>
 
+            <p>
 
-                <img
-                    src="images/ryukyu-logo.png"
-                    alt="University of the Ryukyus">
+                Sweet MJ, Beger M, Benzoni F, Camp E,
+                del Campo J, Dobson KL, Galvis N,
+                Ghodrati Shojaei M, Goby G, Harding S,
+                Huang D, Ivanenko V, Richards Z,
+                Rinkevich B, Schläppy ML, Storlazzi CD,
+                <strong>Tavakoli-Kolour P</strong>,
+                Karenne T, van der Meij S, Villalobos J,
+                Voolstra CR, Walker BK (2026).
 
+            </p>
 
-                <div class="university-name">
+            <p style="margin-top:10px;">
 
-                    University of the Ryukyus
+                <i>
+                    World Ocean Assessment III
+                </i>,
+                United Nations, New York, USA,
+                pp. 325–344.
 
-                </div>
-
-
-            </div>
-
-
-            <!-- National Taiwan University -->
-
-            <div class="university">
-
-
-                <img
-                    src="images/ntu-logo.png"
-                    alt="National Taiwan University">
-
-
-                <div class="university-name">
-
-                    National Taiwan University
-
-                </div>
-
-
-            </div>
-
+            </p>
 
         </div>
 
@@ -1252,9 +2839,9 @@
 </section>
 
 
-<!-- =========================================
+<!-- =========================
      FOOTER
-========================================= -->
+========================= -->
 
 <footer>
 
@@ -1266,4 +2853,3 @@
 </body>
 
 </html>
-```
